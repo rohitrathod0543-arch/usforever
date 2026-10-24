@@ -1,0 +1,1073 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US FOREVER | Premium Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Premium Navbar -->
+    <header class="navbar">
+
+        <a href="#" class="logo">US<span>FOREVER</span></a>
+
+        <nav class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="shoes.html">SHOES</a>
+            <a href="watch.html">Watch</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" aria-label="Search">⌕</button>
+            <button class="icon-btn" aria-label="Wishlist">♡</button>
+            <button class="icon-btn cart-btn" aria-label="Shopping cart">
+                🛍 <span class="cart-count">0</span>
+            </button>
+        </div>
+
+    </header>
+    <!----2nd ---->
+    
+<!-- Premium Hero Banner -->
+<section class="hero-banner">
+    <div class="hero-content">
+        <span class="hero-tag">✦ THE NEW COLLECTION · 2026</span>
+
+        <h1>DEFINE YOUR<br><span>OWN STYLE.</span></h1>
+
+        <p>Premium essentials. Timeless style.<br>
+        Discover your next favourite look.</p>
+
+        <a href="#collection" class="hero-btn">
+            EXPLORE COLLECTION <span>→</span>
+        </a>
+
+        <div class="hero-offer">
+            <span class="offer-label">LIMITED-TIME OFFER</span>
+            <strong></strong>
+            <span class="offer-note">ON SELECTED STYLES</span>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="hero-circle"></div>
+
+        <img
+        src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRLrkf4ODl-bbohng3Zy8c7lTxjdF96IQFvrzFpm0_HaoXKBr_o-bWGh9GB6wDrijD05cuT6lQAZSFDVuvzcT8Ll-ruW_vLqg"
+            alt="Premium fashion collection"
+            class="hero-image"
+        >
+
+        <div class="hero-stamp">
+            <span>US</span>
+            <span>FOREVER</span>
+            <small>EST. 2026</small>
+        </div>
+
+        <div class="hero-bottom-label">
+            <span>01 / NEW SEASON</span>
+            <span>MADE TO STAND OUT.</span>
+        </div>
+    </div>
+
+    <div class="hero-live">
+        <span class="live-dot"></span>
+        <span>LIVE</span>
+        <time id="live-time">--:--:--</time>
+    </div>
+</section>
+
+<script>
+    function updateLiveTime() {
+        const now = new Date();
+
+        document.getElementById("live-time").textContent =
+            now.toLocaleTimeString("en-IN", {
+                timeZone: "Asia/Kolkata",
+                hour12: true
+            });
+    }
+
+    updateLiveTime();
+    setInterval(updateLiveTime, 1000);
+</script>
+<!--3rd -->
+<!-- STEP 3: T-SHIRT COLLECTION -->
+<section class="shirt-section" id="collection">
+
+    <div class="shirt-heading">
+        <span class="shirt-eyebrow">US FOREVER / ESSENTIALS</span>
+        <h2> <span>THE T-SHIRT EDIT.</span></h2>
+        <p>Everyday essentials. Effortless style.</p>
+    </div>
+
+    <div class="shirt-grid">
+
+        <!-- T-Shirt 1 -->
+        <article class="shirt-card" data-color="black"
+                 data-name="Classic Black Tee">
+            <div class="shirt-image-wrap">
+                <span class="shirt-badge">BESTSELLER</span>
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+                     alt="Classic white Tee" class="shirt-image">
+            </div>
+            <div class="shirt-info">
+                <div class="shirt-title-row">
+                    <h3>Classic Black Tee</h3>
+                    <span class="shirt-color black"></span>
+                </div>
+                <p class="shirt-description">Essential Fit · Black</p>
+                <div class="shirt-price">₹199 <span>₹399</span> <b>50% OFF</b></div>
+                <button class="shirt-buy" type="button"
+                        data-product="Classic Black Tee"
+                        data-color="Black">ADD TO CART +</button>
+            </div>
+        </article>
+
+        <!-- T-Shirt 2 -->
+        <article class="shirt-card" data-color="white"
+                 data-name="Pure White Tee">
+            <div class="shirt-image-wrap">
+                <span class="shirt-badge">EVERYDAY ICON</span>
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=85
+"
+     alt="Pure White Tee" class="shirt-image">
+            </div>
+            <div class="shirt-info">
+                <div class="shirt-title-row">
+                    <h3>Pure White Tee</h3>
+                    <span class="shirt-color white"></span>
+                </div>
+                <p class="shirt-description">Classic Fit · White</p>
+                <div class="shirt-price">₹199 <span>₹399</span> <b>50% OFF</b></div>
+                <button class="shirt-buy" type="button"
+                        data-product="Pure White Tee"
+                        data-color="White">ADD TO CART +</button>
+            </div>
+        </article>
+
+        <!-- T-Shirt 3 -->
+        <article class="shirt-card" data-color="olive"
+                 data-name="Olive Street Tee">
+            <div class="shirt-image-wrap">
+                <span class="shirt-badge">TRENDING</span>
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85
+"
+                     alt="Olive Street Tee" class="shirt-image">
+            </div>
+            <div class="shirt-info">
+                <div class="shirt-title-row">
+                    <h3>Olive Street Tee</h3>
+                    <span class="shirt-color olive"></span>
+                </div>
+                <p class="shirt-description">Streetwear Fit · Olive</p>
+                <div class="shirt-price">₹199 <span>₹399</span> <b>50% OFF</b></div>
+                <button class="shirt-buy" type="button"
+                        data-product="Olive Street Tee"
+                        data-color="Olive">ADD TO CART +</button>
+            </div>
+        </article>
+
+        <!-- T-Shirt 4 -->
+        <article class="shirt-card" data-color="blue"
+                 data-name="Midnight Blue Tee">
+            <div class="shirt-image-wrap">
+                <span class="shirt-badge">NEW ARRIVAL</span>
+                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=700&q=85"
+                     alt="Midnight Blue Tee" class="shirt-image">
+            </div>
+            <div class="shirt-info">
+                <div class="shirt-title-row">
+                    <h3>Midnight Blue Tee</h3>
+                    <span class="shirt-color blue"></span>
+                </div>
+                <p class="shirt-description">Modern Fit · Blue</p>
+                <div class="shirt-price">₹199 <span>₹399</span> <b>50% OFF</b></div>
+                <button class="shirt-buy" type="button"
+                        data-product="Midnight Blue Tee"
+                        data-color="Blue">ADD TO CART +</button>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="shirt-message" id="shirt-message" aria-live="polite"></p>
+
+</section>
+
+<!--4th one-->
+
+<!-- STEP 4: MEN'S T-SHIRTS -->
+<section class="mens-section" id="mens-tshirts">
+
+    <div class="mens-heading">
+        <span class="mens-tag">MADE FOR MEN</span>
+        <h2> <span>MEN'S ESSENTIALS</span></h2>
+        <p>Premium T-shirts. Everyday confidence.</p>
+    </div>
+
+    <div class="mens-grid">
+
+        <!-- T-Shirt 1 -->
+        <div class="mens-card">
+            <div class="mens-image">
+                <span class="discount-badge">30% OFF</span>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQOQDvgVh6Ow9fwJWvpJNkrtbdmXQyDOt0KEXPR69XJsWbISY46IgcxXOQY09KwX3dJgZ4B83tW7-wq6lnTDcDHp60VxmAZjni3dpTP861qBSoDjGRHIbA3yA"
+                    alt="mens light brown">
+            </div>
+            <div class="mens-info">
+                <h3>light blue Mens Tee</h3>
+                <p class="mens-color">BLACK</p>
+                <div class="mens-price">
+                    <span class="new-price">₹279.30</span>
+                    <span class="old-price">₹399</span>
+                </div>
+                <button class="mens-buy">ADD TO CART</button>
+            </div>
+        </div>
+
+        <!-- T-Shirt 2 -->
+        <div class="mens-card">
+            <div class="mens-image">
+                <span class="discount-badge">30% OFF</span>
+                <img
+                   src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQErtJYcIz4KuETB03fsy7Kh24yWZAR5kqJwUUWq3tECw-F8kK2bRQ1q5fWrbrNrv7yp3M9uhzhN6qJP7UlCjTihhj9JDNENTHA5l-qoJS3169bNdxa2LjK"
+                    alt="Men's white T-shirt">
+            </div>
+            <div class="mens-info">
+                <h3>Pure brown Tee</h3>
+                <p class="mens-color">WHITE</p>
+                <div class="mens-price">
+                    <span class="new-price">₹279.30</span>
+                    <span class="old-price">₹399</span>
+                </div>
+                <button class="mens-buy">ADD TO CART</button>
+            </div>
+        </div>
+
+        <!-- T-Shirt 3 -->
+        <div class="mens-card">
+            <div class="mens-image">
+                <span class="discount-badge">30% OFF</span>
+                <img
+                    src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRT6D7ydvdyrupSQU6zjkEkWKd16RHlXRBv06AMpFDY1jZkqyv1MTL3mJI3qUJAdwSjnRSNYeyfgnBYgKRt_FOJZrJvLXPeMgQaQWSP2xOvln03V1Vu2JrJ"
+                    alt="Men's premium casual T-shirt">
+            </div>
+            <div class="mens-info">
+                <h3>Urban red Tee</h3>
+                <p class="mens-color">CASUAL</p>
+                <div class="mens-price">
+                    <span class="new-price">₹279.30</span>
+                    <span class="old-price">₹399</span>
+                </div>
+                <button class="mens-buy">ADD TO CART</button>
+            </div>
+        </div>
+
+        <!-- T-Shirt 4 -->
+        <div class="mens-card">
+            <div class="mens-image">
+                <span class="discount-badge">30% OFF</span>
+                <img
+                    src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR5kF3p0eWhgJ4C9E8TE3lcNxZHfWOBnA6PvkK1hsPxcS-oy_dy0zihQL_CErMRZ5lUv5vDbYxv3IOevKC30X6U2A5Oos9f3gQVPTferUABUOW3kV6obzdjLg"
+                    alt="Men's stylish fashion T-shirt">s
+            </div>
+            <div class="mens-info">
+                <h3>Morden black Tee</h3>
+                <p class="mens-color">OLIVE STYLE</p>
+                <div class="mens-price">
+                    <span class="new-price">₹279.30</span>
+                    <span class="old-price">₹399</span>
+                </div>
+                <button class="mens-buy">ADD TO CART</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--5t one-->
+
+<!-- STEP 5: PREMIUM T-SHIRTS -->
+<section class="premium-section" id="premium-tshirts">
+
+    <div class="premium-heading">
+        <span>PREMIUM COLLECTION</span>
+        <h2> <b> THE ICONIC EDIT</b></h2>
+        <p>Upgrade your everyday style.</p>
+    </div>
+
+    <div class="premium-grid">
+
+        <div class="premium-card">
+            <div class="premium-image">
+                <span class="premium-badge">20% OFF</span>
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSbD1bVqA8GIJ3J-BytlGEvCnAGTKxr3w3KeYOurnpTpValqS6l4xM0g_3ouYnyX3ipZK2Aq8NWmIGf1GK3AMHjU0dPSwtq9hD1K18O6ystswOKn36YEXLF" alt="Premium men's black T-shirt">
+            </div>
+            <div class="premium-info">
+                <h3>brown round nech Tee</h3>
+                <p>MEN'S PREMIUM T-SHIRT</p>
+                <div class="premium-price">
+                    <strong>₹520</strong>
+                    <del>₹650</del>
+                </div>
+                <button class="premium-buy" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <div class="premium-image">
+                <span class="premium-badge">20% OFF</span>
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ6UzclgcAXzhXvN5dxYaqJW4Hw-UXSkbxu6V6Kz9xHAStXcwCjDOf9WPxbm8BiPJ4aWYgnU-3RP8yucwr2AnSQFWg1HStbabFC_BJ3u2A" alt="Premium men's white T-shirt">
+            </div>
+            <div class="premium-info">
+                <h3> Colorblock Polo Tee</h3>
+                <p>MEN'S PREMIUM T-SHIRT</p>
+                <div class="premium-price">
+                    <strong>₹520</strong>
+                    <del>₹650</del>
+                </div>
+                <button class="premium-buy" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <div class="premium-image">
+                <span class="premium-badge">20% OFF</span>
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ5EgSh8aOJyLGXRoD7g_7lbyMPATJ6NnzOFqFtVZzZprCqYLW9RpmkeL7lbZZhkJ7dbris_lXuTn3-EUAcIVAiGTlma_AfKWEzzZ3WcnIc60mmunoI_sDcKN0"alt="Premium men's casual T-shirt">
+            </div>
+            <div class="premium-info">
+                <h3>Nykyaa mens Tee</h3>
+                <p>MEN'S PREMIUM T-SHIRT</p>
+                <div class="premium-price">
+                    <strong>₹520</strong>
+                    <del>₹650</del>
+                </div>
+                <button class="premium-buy" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <div class="premium-image">
+                <span class="premium-badge">20% OFF</span>
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR1hcLRetFYb7CPe7Wfc-DjylfllO7Bd2ccH1Q97qLhXJaJPDiMjjx7N8wEMJClD0waqKYDNszUWbkUBwMH1KHmMVlA7JYw9rfSEk_XjvCh0C5z4XHcY48C5eU" alt="Premium men's stylish T-shirt">
+            </div>
+            <div class="premium-info">
+                <h>Light green mens Tee</h3>
+                <p>MEN'S PREMIUM T-SHIRT</p>
+                <div class="premium-price">
+                    <strong>₹520</strong>
+                    <del>₹650</del>
+                </div>
+                <button class="premium-buy" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- mens shirt section-->
+
+<!-- MEN'S SHIRTS COLLECTION -->
+
+<!-- MEN'S SHIRTS COLLECTION -->
+
+<section class="shirts-section" id="mens-shirts">
+
+```
+<div class="shirts-heading">
+    <span class="shirts-tag">US FOREVER EXCLUSIVE</span>
+    <h2>MEN'S <span>SHIRTS</span></h2>
+    <p>Redefine your style with timeless elegance.</p>
+</div>
+
+<div class="shirts-grid">
+
+    <!-- SHIRT 1 -->
+    <div class="shirt-card">
+        <div class="shirt-image">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSILmnW4BKZQ4pmzOTRiotQSHht4bxzud5-2WWDP0xvDdll6efhfQzVOXdgqhwye8RKj0sSRvArrLK5OQi7Ns_9C3jzX_rfJst5dm-mzAm2lF0glmu_WXSP8Q" alt="Classic Black Shirt">
+            <span class="shirt-badge">NEW</span>
+        </div>
+
+        <div class="shirt-info">
+            <p class="shirt-category">MEN'S CASUAL SHIRT</p>
+            <h3>Classic whitet</h3>
+
+            <div class="shirt-price">
+                <span class="old-price">₹665</span>
+                <span class="discount-badge">10% OFF</span>
+                <div class="final-price">₹599</div>
+            </div>
+
+            <button class="shirt-btn" onclick="addShirtToCart('Classic Black Shirt', 599)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- SHIRT 2 -->
+    <div class="shirt-card">
+        <div class="shirt-image">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSOhzUnZVo37-VOyJN6BoQL4Na8WUHw4u2mRGO6cfbism5xsd8GBLNtYVrKrZOqdQC-ItQ_rM-qNsK4LGC4PqQxuRfvYQKVZzgLBoothouUnyLndFB-i7Q4" alt="Premium White Shirt">
+            <span class="shirt-badge">NEW</span>
+        </div>
+
+        <div class="shirt-info">
+            <p class="shirt-category">MEN'S PREMIUM SHIRT</p>
+            <h3>Premium white black line shirt</h3>
+
+            <div class="shirt-price">
+                <span class="old-price">₹777</span>
+                <span class="discount-badge">10% OFF</span>
+                <div class="final-price">₹699</div>
+            </div>
+
+            <button class="shirt-btn" onclick="addShirtToCart('Premium White Shirt', 699)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- SHIRT 3 -->
+    <div class="shirt-card">
+        <div class="shirt-image">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRfxGhjDv8X3LGrDJLSmJj8nCy6EgnQntm_Vlyv57ukgRqe8s0EQG9PJfv3rqV9Cars7t9p_HR32BvWMO3y12nmjbhV1SfpP6k3NTlfSNU" alt="Olive Green Shirt">
+            <span class="shirt-badge">TRENDING</span>
+        </div>
+
+        <div class="shirt-info">
+            <p class="shirt-category">MEN'S SMART CASUAL</p>
+            <h3>light grey modern shirt</h3>
+
+            <div class="shirt-price">
+                <span class="old-price">₹888</span>
+                <span class="discount-badge">10% OFF</span>
+                <div class="final-price">₹799</div>
+            </div>
+
+            <button class="shirt-btn" onclick="addShirtToCart('Olive Green Shirt', 799)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- SHIRT 4 -->
+    <div class="shirt-card">
+        <div class="shirt-image">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTstaEzW95zEQ1jrR8JJPPsmPmO0tiwVXlwFhnci5GSkzqcv3QrNxINrI1fNvCgkEcBRBln8iVj4wrVs24ITUCeZfB2Jzjg4xoumrUikRUBxFPRx3fb5CqH" alt="Navy Blue Shirt">
+            <span class="shirt-badge">PREMIUM</span>
+        </div>
+
+        <div class="shirt-info">
+            <p class="shirt-category">MEN'S PREMIUM SHIRT</p>
+            <h3>stylish dark black shirt</h3>
+
+            <div class="shirt-price">
+                <span class="old-price">₹999</span>
+                <span class="discount-badge">10% OFF</span>
+                <div class="final-price">₹899</div>
+            </div>
+
+            <button class="shirt-btn" onclick="addShirtToCart('Navy Blue Shirt', 899)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+<!--step8-->
+
+
+<!-- PREMIUM SHIRTS COLLECTION -->
+
+<section class="premium-shirts-section" id="premium-shirts">
+
+```
+<div class="premium-shirts-heading">
+    <span class="premium-shirts-tag">US FOREVER LUXURY</span>
+    <h2>PREMIUM <span>SHIRTS</span></h2>
+    <p>Exceptional quality. Effortless sophistication.</p>
+</div>
+
+<div class="premium-shirts-grid">
+
+    <!-- SHIRT 1 -->
+    <div class="premium-shirt-card">
+        <div class="premium-shirt-image">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS2wFR9LHuOeY8hzM00eaaW4NkoprYEeqvF8DtLplwMvr9JRvFQ5g-Ae0JPwS7x_kvK7uOeZFG6AMW9LgG8ziW6hezQSmithUqqvvpET-vj" alt="Luxury Black Shirt">
+            <span class="premium-shirt-badge">BESTSELLER</span>
+        </div>
+        <div class="premium-shirt-info">
+            <p>LUXURY COLLECTION</p>
+            <h3>Luxury white cheks primium shirt</h3>
+            <span class="premium-old-price">₹1444</span>
+            <span class="premium-discount">10% OFF</span>
+            <div class="premium-final-price">₹1299</div>
+            <button class="premium-shirt-btn"
+                onclick="addShirtToCart('Luxury Black Shirt', 1299)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- SHIRT 2 -->
+    <div class="premium-shirt-card">
+        <div class="premium-shirt-image">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSILmnW4BKZQ4pmzOTRiotQSHht4bxzud5-2WWDP0xvDdll6efhfQzVOXdgqhwye8RKj0sSRvArrLK5OQi7Ns_9C3jzX_rfJst5dm-mzAm2lF0glmu_WXSP8Q" alt="Premium White Shirt">
+            <span class="premium-shirt-badge">NEW</span>
+        </div>
+        <div class="premium-shirt-info">
+            <p>PREMIUM COLLECTION</p>
+            <h3>Signature White primium Shirt</h3>
+            <span class="premium-old-price">₹1555</span>
+            <span class="premium-discount">10% OFF</span>
+            <div class="premium-final-price">₹1399</div>
+            <button class="premium-shirt-btn"
+                onclick="addShirtToCart('Signature White Shirt', 1399)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- SHIRT 3 -->
+    <div class="premium-shirt-card">
+        <div class="premium-shirt-image">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRFy2xexk38QmofBrS_zsuZ_usj-bpcGxhZ6musMhluq0hupsRRpGkfTrawmbccjGU5Lwi8YYeVzDLQoaV3a6WcSvpjdzHbqUo6Btg_fxcvNIEEEacIh30-" alt="Olive Premium Shirt">
+            <span class="premium-shirt-badge">TRENDING</span>
+        </div>
+        <div class="premium-shirt-info">
+            <p>DESIGNER COLLECTION</p>
+            <h3>blue chesks primium shirt</h3>
+            <span class="premium-old-price">₹1666</span>
+            <span class="premium-discount">10% OFF</span>
+            <div class="premium-final-price">₹1499</div>
+            <button class="premium-shirt-btn"
+                onclick="addShirtToCart('Olive Luxury Shirt', 1499)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- SHIRT 4 -->
+    <div class="premium-shirt-card">
+        <div class="premium-shirt-image">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcReh5sFPc52uLQ2a_uXo7gqBcucVX2PqNkgmYyy8RUp1AuMKdvwe1kGVobCLjIhIPxfl6nFYuT5uemMLxzHFXx7mj2rLvpiGjCap9jxCvj6p77z0PU66FnjxQ" alt="Navy Premium Shirt">
+            <span class="premium-shirt-badge">EXCLUSIVE</span>
+        </div>
+        <div class="premium-shirt-info">
+            <p>ELITE COLLECTION</p>
+            <h3>navy blue primium shirt </h3>
+            <span class="premium-old-price">₹1777</span>
+            <span class="premium-discount">10% OFF</span>
+            <div class="premium-final-price">₹1599</div>
+            <button class="premium-shirt-btn"
+                onclick="addShirtToCart('Navy Elite Shirt', 1599)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+<!--------------------------------------------------------pant sale start ---------------------------------->
+<!-- PANTS SALE BANNER -->
+
+<section class="pants-sale-banner">
+
+
+<div class="pants-banner-content">
+
+    <span class="pants-brand">US FOREVER EXCLUSIVE</span>
+
+    <h2>MEN'S <span>PANTS</span></h2>
+
+    <div class="pants-discount">
+        <span class="discount-number">50%</span>
+        <span class="discount-off">OFF</span>
+    </div>
+
+    <p class="pants-banner-description">
+        PREMIUM QUALITY | MODERN FIT | EVERYDAY STYLE
+    </p>
+
+    <div class="pants-limited-offer">
+        <span class="offer-label">LIMITED TIME OFFER</span>
+        <h3>HURRY UP!</h3>
+    </div>
+
+    <div class="pants-timer-box">
+        <span class="timer-heading">OFFER ENDS IN</span>
+
+        <div class="pants-timer">
+            <div class="timer-unit">
+                <span id="pants-hours">23</span>
+                <small>HOURS</small>
+            </div>
+
+            <span class="timer-colon">:</span>
+
+            <div class="timer-unit">
+                <span id="pants-minutes">59</span>
+                <small>MINUTES</small>
+            </div>
+
+            <span class="timer-colon">:</span>
+
+            <div class="timer-unit">
+                <span id="pants-seconds">59</span>
+                <small>SECONDS</small>
+            </div>
+        </div>
+    </div>
+
+    <a href="#mens-jeans" class="pants-shop-btn">
+        SHOP PANTS NOW →
+    </a>
+
+</div>
+
+<div class="pants-banner-image">
+    <!-- YAHAN APNI IMAGE SELECT KARNA -->
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTwPV5_jlC2fXmsGiuy6rvU4jOnt867PVMrPnBQIfqRMywOdaEYnDQ7lPo3-eWIFbMd-lOsdLhiWWc9Ib5wwov8YavDEMG8D7HtcsSIWY1GYAYQG5IfpGxQ"  alt="Men's Premium Pants">
+
+    <div class="pants-image-label">
+        <span>NEW COLLECTION</span>
+        <h3>STYLE THAT<br>DEFINES YOU.</h3>
+    </div>
+</div>
+
+</section>
+<!-- MEN'S PANTS COLLECTION -->
+
+<section class="pants-products-section" id="pants-collection">
+
+
+<div class="pants-products-heading">
+    <span class="pants-products-tag">US FOREVER EXCLUSIVE</span>
+    <h2>MEN'S <span>PANTS</span></h2>
+    <p>Discover your perfect fit. Upgrade your everyday style.</p>
+</div>
+
+<div class="pants-products-grid">
+
+    <!-- PANT 1 -->
+    <div class="pants-product-card">
+        <div class="pants-product-image">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQy7_ieQtoEK4lZ0ucjpDlUVxeXWMxADf6X4jIpf_Wme--R3S-sjk3dgU4LPTF97Oq-bNsZNjUboPbI7vYvEsSY4A3QWGMA1-gxsVLjTfCh6crIfMlgJdSrPQ" alt="Classic Black Pants">
+            <span class="pants-product-badge">BESTSELLER</span>
+        </div>
+        <div class="pants-product-info">
+            <p class="pants-product-category">MEN'S CASUAL PANTS</p>
+            <h3>Classic grey Pants</h3>
+            <div class="pants-product-pricing">
+                <span class="pants-product-old">₹1665</span>
+                <span class="pants-product-discount">40% OFF</span>
+                <div class="pants-product-final">₹999</div>
+            </div>
+            <button class="pants-product-btn"
+                onclick="addPantToCart('Classic Black Pants', 999)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- PANT 2 -->
+    <div class="pants-product-card">
+        <div class="pants-product-image">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRpCU8W1pKr0ngstCpX-aVZlyczueapOJxnm6h7QgWV5Sn7nfI-phTVWEOO1Mgz47rgYCgsdjKzYzqkh_rxUEf2BYSEzPBIcGD1m-_DAGgRy06gCPYVG_Dx7Q" alt="Premium Cargo Pants">
+            <span class="pants-product-badge">TRENDING</span>
+        </div>
+        <div class="pants-product-info">
+            <p class="pants-product-category">MEN'S CARGO PANTS</p>
+            <h3>Premium black Pants</h3>
+            <div class="pants-product-pricing">
+                <span class="pants-product-old">₹1832</span>
+                <span class="pants-product-discount">40% OFF</span>
+                <div class="pants-product-final">₹1099</div>
+            </div>
+            <button class="pants-product-btn"
+                onclick="addPantToCart('Premium Cargo Pants', 1099)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- PANT 3 -->
+    <div class="pants-product-card">
+        <div class="pants-product-image">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRKJFSR8CX0IbDkGMyNPBlFT_J_Jl4lR6Vb5VjOUw9CtfgcsbKDq5KVQAS5uhKZ8LoiML3onkw9T6CkK5NH8dxNv-dlbCZeQr1byGfzQQUX0SpeBJ_3um6zzx0" alt="Olive Green Pants">
+            <span class="pants-product-badge">NEW</span>
+        </div>
+        <div class="pants-product-info">
+            <p class="pants-product-category">MEN'S SMART CASUAL</p>
+            <h3>Olive white Pants</h3>
+            <div class="pants-product-pricing">
+                <span class="pants-product-old">₹1999</span>
+                <span class="pants-product-discount">40% OFF</span>
+                <div class="pants-product-final">₹1199</div>
+            </div>
+            <button class="pants-product-btn"
+                onclick="addPantToCart('Olive Green Pants', 1199)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+    <!-- PANT 4 -->
+    <div class="pants-product-card">
+        <div class="pants-product-image">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTO5zGll4ZiRZZ1dmXRunBEx3f8wRLoEp1tlqmCc_F_BaCgHd8yzuO2xdy8XyleJvKlDhVBfpoU3Y3YjNKR8m-WoS0uWV3pwsBK5jvnnw" alt="Premium Beige Pants">
+            <span class="pants-product-badge">PREMIUM</span>
+        </div>
+        <div class="pants-product-info">
+            <p class="pants-product-category">MEN'S PREMIUM PANTS</p>
+            <h3>Premium Beige Pants</h3>
+            <div class="pants-product-pricing">
+                <span class="pants-product-old">₹2165</span>
+                <span class="pants-product-discount">40% OFF</span>
+                <div class="pants-product-final">₹1299</div>
+            </div>
+            <button class="pants-product-btn"
+                onclick="addPantToCart('Premium Beige Pants', 1299)">
+                ADD TO CART
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+<!--------------------------section 2 ----------------------->
+<section class="pants-products-section">
+    <div class="pants-products-grid">
+
+        <div class="pants-product-card">
+            <div class="pants-product-image">
+                <span class="pants-sale-badge">30% OFF</span>
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTLDjjVxZRcUa1jl5Gg_VUZF7iARmMXqsdR0njOa0nKoBsqDTFAK-hpmFIMYODy68wAahlCj7CeI8Gq7AUCl1oo69LhT3ifBAfAp3b8gL8">
+            </div>
+            <div class="pants-product-info">
+                <h3>Classic Grey tone Pants</h3>
+                <div class="pants-price">
+                    <span class="pants-old-price">₹2141</span>
+                    <span class="pants-final-price">₹1499</span>
+                </div>
+                <button class="pants-product-btn"
+                    onclick="addPantToCart('Classic Black Pants',1499)">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+        <div class="pants-product-card">
+            <div class="pants-product-image">
+                <span class="pants-sale-badge">30% OFF</span>
+                <img src="https://img.tatacliq.com/images/i19/1348Wx2000H/MP000000023265848_1348Wx2000H_202408100248161.jpeg" alt="Premium Cargo Pants">
+            </div>
+            <div class="pants-product-info">
+                <h3>Premium Blue Pants</h3>
+                <div class="pants-price">
+                    <span class="pants-old-price">₹2270</span>
+                    <span class="pants-final-price">₹1589</span>
+                </div>
+                <button class="pants-product-btn"
+                    onclick="addPantToCart('Premium Cargo Pants',1589)">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+        <div class="pants-product-card">
+            <div class="pants-product-image">
+                <span class="pants-sale-badge">30% OFF</span>
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRqsuLyyuHlCayZyrpeopIWFlAcXIM2-SKxShPw1QjPptOKbUWlqjJb51vphVopmKKYbqtIHjpJnrZjbYevSn5MqMdj-qJwpOOnKrGG6stLb7uGuIpMPdxK" alt="Olive Green Pants">
+            </div>
+            <div class="pants-product-info">
+                <h3>Olive pink  Pants</h3>
+                <div class="pants-price">
+                    <span class="pants-old-price">₹2413</span>
+                    <span class="pants-final-price">₹1689</span>
+                </div>
+                <button class="pants-product-btn"
+                    onclick="addPantToCart('Olive Green Pants',1689)">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+        <div class="pants-product-card">
+            <div class="pants-product-image">
+                <span class="pants-sale-badge">30% OFF</span>
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ8S1dyzGbaC4l1MCELxc_B1L0iKlbB_DOSORas0HQI-dxM-tacR_XEUVtBnBWW2DU5Vukrk4QuUmbX3os5je6xCpYPeZonnm3hblVhW80" alt="Premium Beige Pants">
+            </div>
+            <div class="pants-product-info">
+                <h3>Premium brown Pants</h3>
+                <div class="pants-price">
+                    <span class="pants-old-price">₹2427</span>
+                    <span class="pants-final-price">₹1699</span>
+                </div>
+                <button class="pants-product-btn"
+                    onclick="addPantToCart('Premium Beige Pants',1699)">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!----------------------------------------section part -------------------------------------------->
+```html
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="uf-benefits" id="why-us">
+
+    <div class="uf-section-heading">
+        <span class="uf-eyebrow">THE US FOREVER DIFFERENCE</span>
+        <h2>WHY CHOOSE <span>US?</span></h2>
+        <p>Premium fashion. Exceptional experience.</p>
+    </div>
+
+    <div class="uf-benefits-grid">
+
+        <div class="uf-benefit-card">
+            <div class="uf-benefit-icon">✦</div>
+            <h3>Premium Quality</h3>
+            <p>Carefully selected fabrics and exceptional finishing for everyday style.</p>
+        </div>
+
+        <div class="uf-benefit-card">
+            <div class="uf-benefit-icon">➤</div>
+            <h3>Fast Delivery</h3>
+            <p>Get your favourite fashion delivered straight to your doorstep.</p>
+        </div>
+
+        <div class="uf-benefit-card">
+            <div class="uf-benefit-icon">♢</div>
+            <h3>Secure Shopping</h3>
+            <p>Enjoy a smooth shopping experience with secure checkout options.</p>
+        </div>
+
+        <div class="uf-benefit-card">
+            <div class="uf-benefit-icon">↺</div>
+            <h3>Easy Returns</h3>
+            <p>Simple return support according to our applicable return policy.</p>
+        </div>
+
+        <div class="uf-benefit-card">
+            <div class="uf-benefit-icon">✧</div>
+            <h3>Modern Styles</h3>
+            <p>Discover versatile designs made for your everyday wardrobe.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ========== CUSTOMER REVIEWS ========== -->
+<section class="uf-reviews" id="customer-reviews">
+
+    <div class="uf-section-heading">
+        <span class="uf-eyebrow">CUSTOMER LOVE</span>
+        <h2>WHAT THEY <span>SAY</span></h2>
+        <p>Style speaks louder when customers love it.</p>
+    </div>
+
+    <div class="uf-reviews-grid">
+
+        <article class="uf-review-card">
+            <div class="uf-review-stars">★★★★★</div>
+            <p class="uf-review-text">
+                "The fit and overall look are excellent. The design feels
+                premium and works perfectly for everyday wear."
+            </p>
+            <div class="uf-review-customer">
+                <div class="uf-review-avatar">A</div>
+                <div>
+                    <h3>Aditya Sharma</h3>
+                    <span>Fashion Enthusiast</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="uf-review-card">
+            <div class="uf-review-stars">★★★★★</div>
+            <p class="uf-review-text">
+                "I really like the clean designs and colour options.
+                The collection has a modern and stylish feel."
+            </p>
+            <div class="uf-review-customer">
+                <div class="uf-review-avatar">R</div>
+                <div>
+                    <h3>Rahul Verma</h3>
+                    <span>Style Lover</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="uf-review-card">
+            <div class="uf-review-stars">★★★★★</div>
+            <p class="uf-review-text">
+                "A simple and attractive fashion collection.
+                I love the premium black-and-gold shopping experience."
+            </p>
+            <div class="uf-review-customer">
+                <div class="uf-review-avatar">K</div>
+                <div>
+                    <h3>Karan Mehta</h3>
+                    <span>Regular Shopper</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="uf-review-card">
+            <div class="uf-review-stars">★★★★★</div>
+            <p class="uf-review-text">
+                "Great-looking styles with a versatile collection.
+                There are plenty of options to explore."
+            </p>
+            <div class="uf-review-customer">
+                <div class="uf-review-avatar">V</div>
+                <div>
+                    <h3>Vishal Patel</h3>
+                    <span>Fashion Explorer</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="uf-review-note">
+        Sample review designs — replace these with genuine customer reviews.
+    </p>
+</section>
+
+
+<!-- ========== NEWSLETTER ========== -->
+<section class="uf-newsletter" id="newsletter">
+
+    <div class="uf-newsletter-content">
+        <span class="uf-eyebrow">EXCLUSIVE ACCESS</span>
+
+        <h2>YOUR STYLE.<br>YOUR <span>FOREVER.</span></h2>
+
+        <p>
+            Subscribe for updates about new collections, special offers
+            and the latest styles from US FOREVER.
+        </p>
+
+        <form class="uf-newsletter-form" id="ufNewsletterForm">
+            <input
+                type="email"
+                id="ufNewsletterEmail"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                required
+            >
+
+            <button type="submit">SUBSCRIBE ↗</button>
+        </form>
+
+        <p class="uf-newsletter-message" id="ufNewsletterMessage"
+           role="status" aria-live="polite"></p>
+
+        <div class="uf-newsletter-trust">
+            ✦ STYLE UPDATES &nbsp; · &nbsp; ✦ EXCLUSIVE OFFERS
+        </div>
+    </div>
+
+    <div class="uf-newsletter-decoration" aria-hidden="true">
+        <span>U</span>
+        <span>F</span>
+    </div>
+
+</section>
+
+
+<!-- ========== NEWSLETTER JAVASCRIPT ========== -->
+<script>
+(function () {
+    const form = document.getElementById("ufNewsletterForm");
+    const emailInput = document.getElementById("ufNewsletterEmail");
+    const message = document.getElementById("ufNewsletterMessage");
+
+    if (!form || !emailInput || !message) return;
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = emailInput.value.trim();
+
+        if (!emailInput.checkValidity() || !email) {
+            message.textContent = "Please enter a valid email address.";
+            return;
+        }
+
+        message.textContent =
+            "Thanks for your interest! Newsletter signup needs to be connected to a mailing service.";
+
+        emailInput.value = "";
+    });
+})();
+</script>
+<!-- US FOREVER MOVING TEXT -->
+<div class="uf-moving-strip">
+    <div class="uf-moving-track">
+
+        <span>US FOREVER ✦</span>
+        <span>US FOREVER ✦</span>
+        <span>US FOREVER ✦</span>
+        <span>US FOREVER ✦</span>
+        <span>US FOREVER ✦</span>
+        <span>US FOREVER ✦</span>
+
+    </div>
+</div>
+
+<div class="uf-creator-credit">
+    <p>WEBSITE CREATED BY</p>
+    <h2>ROHIT <span>RATHOD</span></h2>
+    <small>© 2026 US FOREVER · ALL RIGHTS RESERVED</small>
+</div>
+<script src="login.js"></script>
+
+
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+
+    if (email && email.includes("@")) {
+        window.location.href = "./index.html";
+    } else {
+        alert("Please enter a valid Gmail address.");
+    }
+});
+
+document.getElementById("demoBtn").addEventListener("click", function() {
+    window.location.href = "./index.html";
+});
+</script>
+
+
+    
+
+
+
+</body>
+</html>
+

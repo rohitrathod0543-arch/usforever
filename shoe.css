@@ -1,0 +1,1754 @@
+
+/* ===========================
+   US SHOES — PREMIUM WEBSITE
+=========================== */
+
+:root {
+    --black: #080808;
+    --panel: #101010;
+    --gold: #e6b85c;
+    --white: #ffffff;
+    --muted: #a1a1a1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ANNOUNCEMENT */
+
+.announcement {
+    width: 100%;
+    padding: 11px 15px;
+    background: var(--gold);
+    color: #080808;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+
+/* Premium Navbar */
+.navbar {
+    width: 100%;
+    min-height: 88px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111111;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    gap: 30px;
+}
+
+/* Brand Logo */
+.logo {
+    color: #d4af37;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #d5d5d5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d4af37;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.shoe-logo {
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.shoe-logo span {
+    color: var(--gold);
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.shoe-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.shoe-nav-links a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #d0d0d0;
+    transition: 0.3s;
+}
+
+.shoe-nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-shop-btn {
+    padding: 13px 18px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.nav-shop-btn span {
+    margin-left: 9px;
+}
+
+.nav-shop-btn:hover {
+    background: var(--gold);
+    color: #080808;
+}
+
+/* HERO */
+
+.shoe-hero {
+    min-height: 670px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 65px 7% 90px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 75% 48%,
+            rgba(230, 184, 92, 0.09),
+            transparent 45%
+        ),
+        linear-gradient(120deg, #080808, #11100e 70%, #080808);
+}
+
+.shoe-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 600px;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 15px;
+    margin-bottom: 27px;
+    border: 1px solid rgba(230, 184, 92, 0.35);
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 12px var(--gold);
+    animation: dotPulse 1.5s infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.7);
+    }
+}
+
+.shoe-hero h1 {
+    font-size: clamp(45px, 6vw, 82px);
+    line-height: 1.02;
+    font-weight: 900;
+    letter-spacing: -4px;
+}
+
+.shoe-hero h1 span {
+    color: var(--gold);
+    display: inline-block;
+}
+
+.hero-description {
+    max-width: 410px;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 33px;
+}
+
+.primary-btn {
+    min-height: 51px;
+    padding: 0 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    background: var(--gold);
+    color: #080808;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(230, 184, 92, 0.15);
+}
+
+.secondary-btn {
+    min-height: 51px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #414141;
+    color: #ddd;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* STATS */
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 53px;
+}
+
+.stat h3 {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.stat p {
+    margin-top: 7px;
+    color: #858585;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 35px;
+    background: #333;
+}
+
+/* HERO IMAGE */
+
+.shoe-hero-visual {
+    position: relative;
+    min-width: 0;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-circle {
+    position: absolute;
+    width: min(90%, 440px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(230, 184, 92, 0.25);
+    border-radius: 50%;
+    box-shadow:
+        0 0 70px rgba(230, 184, 92, 0.06),
+        inset 0 0 60px rgba(230, 184, 92, 0.04);
+}
+
+.hero-circle::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px dashed rgba(230, 184, 92, 0.2);
+    border-radius: 50%;
+}
+
+.hero-shoe-image {
+    position: relative;
+    z-index: 2;
+    width: 115%;
+    max-width: 620px;
+    height: auto;
+    object-fit: contain;
+    transform: rotate(-13deg);
+    filter: drop-shadow(0 30px 28px rgba(0, 0, 0, 0.65));
+    animation: shoeFloat 4s ease-in-out infinite;
+}
+
+@keyframes shoeFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-13deg);
+    }
+
+    50% {
+        transform: translateY(-13px) rotate(-10deg);
+    }
+}
+
+.hero-image-label {
+    position: absolute;
+    top: 12px;
+    left: 8%;
+    right: 8%;
+    display: flex;
+    justify-content: space-between;
+    color: #858585;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.floating-badge {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 55px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    background: rgba(18, 18, 18, 0.92);
+    border: 1px solid rgba(230, 184, 92, 0.4);
+    backdrop-filter: blur(12px);
+}
+
+.floating-badge > span {
+    color: var(--gold);
+    font-size: 25px;
+}
+
+.floating-badge strong,
+.floating-badge small {
+    display: block;
+}
+
+.floating-badge strong {
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.floating-badge small {
+    margin-top: 5px;
+    color: #aaa;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.hero-side-text {
+    position: absolute;
+    right: -30px;
+    top: 45%;
+    transform: rotate(90deg);
+    color: #777;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+.hero-background-text {
+    position: absolute;
+    z-index: 0;
+    bottom: 45px;
+    left: 3%;
+    color: rgba(255, 255, 255, 0.025);
+    font-size: clamp(70px, 14vw, 180px);
+    font-weight: 900;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.hero-bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    right: 7%;
+    min-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #777;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+/* NEXT SECTIONS PLACEHOLDERS */
+
+.shoe-collection-placeholder,
+.shoe-about-placeholder {
+    padding: 90px 20px;
+    text-align: center;
+    background: #0d0d0d;
+    border-bottom: 1px solid #222;
+}
+
+.shoe-collection-placeholder > p,
+.shoe-about-placeholder > p {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.shoe-collection-placeholder h2,
+.shoe-about-placeholder h2 {
+    color: #fff;
+    font-size: clamp(25px, 4vw, 48px);
+    line-height: 1.3;
+    font-weight: 900;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 950px) {
+    .shoes-navbar {
+        padding: 20px 4%;
+        flex-wrap: wrap;
+    }
+
+    .shoe-nav-links {
+        gap: 18px;
+    }
+
+    .shoe-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+        grid-template-columns: 1fr 0.9fr;
+    }
+
+    .shoe-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .shoe-hero-visual {
+        height: 390px;
+    }
+
+    .hero-stats {
+        gap: 13px;
+    }
+
+    .hero-shoe-image {
+        width: 125%;
+    }
+}
+
+@media (max-width: 650px) {
+    .announcement {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .shoes-navbar {
+        min-height: auto;
+        padding: 18px 5%;
+        gap: 18px;
+    }
+
+    .shoe-logo {
+        font-size: 24px;
+    }
+
+    .shoe-logo span {
+        font-size: 17px;
+    }
+
+    .shoe-nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .shoe-nav-links a {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-shop-btn {
+        padding: 11px;
+        font-size: 9px;
+    }
+
+    .shoe-hero {
+        grid-template-columns: 1fr;
+        padding: 50px 6% 75px;
+    }
+
+    .shoe-hero-content {
+        text-align: center;
+    }
+
+    .hero-tag {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .shoe-hero h1 {
+        font-size: clamp(45px, 12vw, 70px);
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        margin: 20px auto 0;
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        font-size: 9px;
+        padding: 0 13px;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 12px;
+        margin-top: 35px;
+    }
+
+    .stat h3 {
+        font-size: 10px;
+    }
+
+    .stat p {
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    .shoe-hero-visual {
+        height: 340px;
+        margin-top: 30px;
+    }
+
+    .hero-circle {
+        width: min(85%, 310px);
+    }
+
+    .hero-shoe-image {
+        width: 110%;
+    }
+
+    .floating-badge {
+        right: 0;
+        bottom: 30px;
+        padding: 10px 12px;
+    }
+
+    .hero-side-text {
+        right: -45px;
+        font-size: 7px;
+    }
+
+    .hero-image-label {
+        left: 0;
+        right: 0;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .hero-bottom-line {
+        left: 6%;
+        right: 6%;
+        font-size: 7px;
+        letter-spacing: 0.8px;
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .live-dot,
+    .hero-shoe-image {
+        animation: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+/*--------------------------step 1*/         
+/* ==================================
+   US SHOES — NIKE COLLECTION
+================================== */
+
+.nike-collection {
+    padding: 95px 6%;
+    background:
+        radial-gradient(ellipse at 50% 0%, #19150e 0%, transparent 50%),
+        #080808;
+    color: #fff;
+}
+
+.nike-section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.nike-eyebrow {
+    color: #e6b85c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.nike-section-heading h2 {
+    margin-top: 20px;
+    font-size: clamp(30px, 5vw, 58px);
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.nike-section-heading h2 span {
+    color: #e6b85c;
+}
+
+.nike-section-heading p {
+    margin-top: 15px;
+    color: #999;
+    font-size: 13px;
+}
+
+/* PRODUCT GRID */
+
+.nike-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* PRODUCT CARD */
+
+.nike-card {
+    min-width: 0;
+    background: #111;
+    border: 1px solid #242424;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+    overflow: hidden;
+}
+
+.nike-card:hover {
+    transform: translateY(-8px);
+    border-color: #e6b85c;
+}
+
+/* PRODUCT IMAGE */
+
+.nike-image-box {
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+    background: #181818;
+}
+
+.nike-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.nike-card:hover .nike-image-box img {
+    transform: scale(1.07);
+}
+
+.nike-discount {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+    padding: 8px 10px;
+    background: #e6b85c;
+    color: #080808;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.nike-image-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* PRODUCT DETAILS */
+
+.nike-product-info {
+    padding: 22px 17px;
+}
+
+.nike-category {
+    color: #b99a5b;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.nike-product-info h3 {
+    margin-top: 12px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.nike-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 17px;
+}
+
+.nike-price strong {
+    color: #e6b85c;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.nike-price del {
+    color: #777;
+    font-size: 13px;
+}
+
+.nike-saving {
+    margin-top: 8px;
+    color: #77c995;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ADD TO CART BUTTON */
+
+.nike-add-btn {
+    width: 100%;
+    min-height: 45px;
+    margin-top: 20px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #e6b85c;
+    color: #e6b85c;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nike-add-btn span {
+    font-size: 19px;
+}
+
+.nike-add-btn:hover {
+    background: #e6b85c;
+    color: #080808;
+}
+
+/* BOTTOM MESSAGE */
+
+.nike-collection-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 55px;
+}
+
+.nike-collection-bottom span {
+    color: #e6b85c;
+}
+
+.nike-collection-bottom p {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* CART NOTIFICATION */
+
+.nike-cart-toast {
+    position: fixed;
+    z-index: 9999;
+    right: 25px;
+    bottom: 25px;
+    max-width: calc(100vw - 40px);
+    padding: 17px 22px;
+    background: #e6b85c;
+    color: #080808;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(15px);
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.nike-cart-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .nike-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .nike-image-box {
+        height: 320px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+    .nike-collection {
+        padding: 65px 15px;
+    }
+
+    .nike-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .nike-section-heading h2 {
+        letter-spacing: -1px;
+    }
+
+    .nike-product-grid {
+        gap: 12px;
+    }
+
+    .nike-image-box {
+        height: 180px;
+    }
+
+    .nike-discount {
+        top: 8px;
+        left: 8px;
+        padding: 6px;
+        font-size: 8px;
+    }
+
+    .nike-product-info {
+        padding: 14px 10px;
+    }
+
+    .nike-category {
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    .nike-product-info h3 {
+        font-size: 13px;
+    }
+
+    .nike-price {
+        gap: 6px;
+    }
+
+    .nike-price strong {
+        font-size: 17px;
+    }
+
+    .nike-price del {
+        font-size: 11px;
+    }
+
+    .nike-saving {
+        font-size: 9px;
+    }
+
+    .nike-add-btn {
+        min-height: 40px;
+        padding: 10px 7px;
+        font-size: 9px;
+        letter-spacing: 0.3px;
+    }
+
+    .nike-collection-bottom p {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
+
+/*project no 2=========================================================
+*/
+/* ===== SECOND SHOE COLLECTION ===== */
+
+.collection-section {
+    padding: 80px 4.7%;
+    background: transparent;
+}
+
+.collection-section .section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.collection-section .section-heading > p:first-child {
+    color: #e6b85c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.collection-section .section-heading h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.collection-section .section-heading h2 span {
+    color: #e6b85c;
+}
+
+.collection-section .section-heading > p:last-child {
+    color: #999999;
+    font-size: 13px;
+}
+
+.collection-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.collection-section .product-card {
+    background: #111111;
+    border: 1px solid #252525;
+    border-radius: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.collection-section .product-card:hover {
+    transform: translateY(-6px);
+    border-color: #e6b85c;
+    box-shadow: 0 12px 30px rgba(230, 184, 92, 0.08);
+}
+
+.collection-section .product-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+.collection-section .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.collection-section .product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.collection-section .discount-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    background: #e6b85c;
+    color: #080808;
+    padding: 10px 12px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.collection-section .product-info {
+    padding: 24px 22px;
+}
+
+.collection-section .product-category {
+    color: #e6b85c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 17px;
+}
+
+.collection-section .product-info h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.collection-section .product-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.collection-section .sale-price {
+    color: #e6b85c;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.collection-section .old-price {
+    color: #888888;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.collection-section .saving {
+    color: #49d889;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+.collection-section .add-to-cart-btn {
+    width: 100%;
+    padding: 19px 14px;
+    background: transparent;
+    color: #e6b85c;
+    border: 1px solid #e6b85c;
+    font-size: 12px;
+    font-weight: 900;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.collection-section .add-to-cart-btn:hover {
+    background: #e6b85c;
+    color: #080808;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .collection-section .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .collection-section {
+        padding: 55px 5%;
+    }
+
+    .collection-section .product-grid {
+        gap: 14px;
+    }
+
+    .collection-section .product-image {
+        height: 160px;
+    }
+
+    .collection-section .product-info {
+        padding: 15px 12px;
+    }
+
+    .collection-section .product-info h3 {
+        font-size: 14px;
+    }
+
+    .collection-section .sale-price {
+        font-size: 18px;
+    }
+
+    .collection-section .add-to-cart-btn {
+        padding: 13px 8px;
+        font-size: 10px;
+    }
+}
+/*=====================================================================================3rd project =============================*/
+/* =====================================
+   US SHOES — PREMIUM COLLECTION 9–12
+   Black + Gold Theme
+===================================== */
+
+#premium-collection {
+    padding: 80px 4.7%;
+    background: transparent;
+}
+
+/* SECTION HEADING */
+
+#premium-collection .section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+#premium-collection .section-heading > p:first-child {
+    color: #e6b85c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+#premium-collection .section-heading h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+#premium-collection .section-heading h2 span {
+    color: #e6b85c;
+}
+
+#premium-collection .section-heading > p:last-child {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* FOUR SHOES GRID */
+
+#premium-collection .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 26px;
+}
+
+/* PRODUCT CARDS */
+
+#premium-collection .product-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #111111;
+    border: 1px solid #252525;
+    border-radius: 0;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#premium-collection .product-card:hover {
+    transform: translateY(-7px);
+    border-color: #e6b85c;
+    box-shadow: 0 12px 30px rgba(230,)
+}
+
+/* project no 5============================================================================*/
+
+/* ======================================
+   PREMIUM COLLECTION — SHOES 13 TO 16
+   Existing Black + Gold Theme
+====================================== */
+
+#elite-collection {
+    padding: 80px 4.7%;
+    background: transparent;
+}
+
+#elite-collection .section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+#elite-collection .section-heading > p:first-child {
+    color: #e6b85c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+#elite-collection .section-heading h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+#elite-collection .section-heading h2 span {
+    color: #e6b85c;
+}
+
+#elite-collection .section-heading > p:last-child {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+#elite-collection .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 26px;
+}
+
+#elite-collection .product-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #111111;
+    border: 1px solid #252525;
+    border-radius: 0;
+    transition: 0.3s ease;
+}
+
+#elite-collection .product-card:hover {
+    transform: translateY(-7px);
+    border-color: #e6b85c;
+    box-shadow: 0 12px 30px rgba(230, 184, 92, 0.10);
+}
+
+#elite-collection .product-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+#elite-collection .product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+#elite-collection .product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+#elite-collection .discount-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    padding: 10px 12px;
+    background: #e6b85c;
+    color: #080808;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+#elite-collection .product-info {
+    padding: 24px 22px;
+}
+
+#elite-collection .product-category {
+    color: #e6b85c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 17px;
+}
+
+#elite-collection .product-info h3 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+#elite-collection .product-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+#elite-collection .sale-price {
+    color: #e6b85c;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+#elite-collection .old-price {
+    color: #888888;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+#elite-collection .saving {
+    color: #49d889;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+#elite-collection .add-to-cart-btn {
+    width: 100%;
+    padding: 19px 14px;
+    background: transparent;
+    color: #e6b85c;
+    border: 1px solid #e6b85c;
+    font-size: 11px;
+    font-weight: 900;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+#elite-collection .add-to-cart-btn:hover {
+    background: #e6b85c;
+    color: #080808;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    #elite-collection .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+    #elite-collection {
+        padding: 55px 5%;
+    }
+
+    #elite-collection .product-grid {
+        gap: 14px;
+    }
+
+    #elite-collection .product-image {
+        height: 160px;
+    }
+
+    #elite-collection .product-info {
+        padding: 15px 12px;
+    }
+
+    #elite-collection .product-info h3 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    #elite-collection .sale-price {
+        font-size: 17px;
+    }
+
+    #elite-collection .old-price {
+        font-size: 11px;
+    }
+
+    #elite-collection .product-category {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+    #elite-collection .saving {
+        font-size: 10px;
+    }
+
+    #elite-collection .add-to-cart-btn {
+        padding: 13px 8px;
+        font-size: 9px;
+    }
+}
+
+
+/*=================================Ending project ====================================================*/
+
+
+/* ====================================
+   US SHOES — PREMIUM BRAND STORY
+==================================== */
+
+.nike-story {
+    position: relative;
+    padding: 110px 7%;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(230, 184, 92, 0.08),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #080808, #111111, #080808);
+
+    border-top: 1px solid rgba(230, 184, 92, 0.2);
+    border-bottom: 1px solid rgba(230, 184, 92, 0.2);
+}
+
+.story-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-label {
+    color: #e6b85c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.story-content h2 {
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+}
+
+.story-content h2 span {
+    color: #e6b85c;
+}
+
+.story-description {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.story-button,
+.ending-button {
+    display: inline-block;
+    padding: 16px 27px;
+    background: #e6b85c;
+    color: #080808;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.story-button:hover,
+.ending-button:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(230, 184, 92, 0.15);
+}
+
+
+/* THREE HIGHLIGHTS */
+
+.story-highlight {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1050px;
+    margin: 85px auto 0;
+}
+
+.highlight-item {
+    padding: 30px 22px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid #252525;
+    transition: 0.3s ease;
+}
+
+.highlight-item:hover {
+    border-color: #e6b85c;
+    transform: translateY(-5px);
+}
+
+.highlight-number {
+    display: block;
+    color: #e6b85c;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.highlight-item h3 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 13px;
+}
+
+.highlight-item p {
+    color: #999999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* FINAL GOLDEN BANNER */
+
+.shoe-ending {
+    position: relative;
+    overflow: hidden;
+    padding: 105px 7%;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(230, 184, 92, 0.13),
+            transparent 60%
+        ),
+        #080808;
+
+    border-bottom: 1px solid rgba(230, 184, 92, 0.2);
+}
+
+.ending-glow {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: rgba(230, 184, 92, 0.07);
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.ending-small {
+    position: relative;
+    color: #e6b85c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.shoe-ending h2 {
+    position: relative;
+    color: #ffffff;
+    font-size: clamp(35px, 6vw, 70px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.shoe-ending h2 span {
+    color: #e6b85c;
+}
+
+.shoe-ending > p:not(.ending-small) {
+    position: relative;
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.ending-button {
+    position: relative;
+}
+
+
+/* PREMIUM FOOTER */
+
+.premium-footer {
+    padding: 60px 7% 30px;
+    background: #050505;
+    text-align: center;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 31px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #e6b85c;
+}
+
+.footer-tagline {
+    color: #999999;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.footer-line {
+    width: 70px;
+    height: 2px;
+    margin: 30px auto;
+    background: #e6b85c;
+}
+
+.footer-credit {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-credit span {
+    color: #e6b85c;
+    font-weight: 800;
+}
+
+.footer-copyright {
+    color: #777777;
+    font-size: 10px;
+    margin-bottom: 18px;
+}
+
+.footer-disclaimer {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666666;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+
+    .nike-story {
+        padding: 75px 6%;
+    }
+
+    .story-content h2 {
+        letter-spacing: -0.5px;
+    }
+
+    .story-description {
+        font-size: 12px;
+    }
+
+    .story-highlight {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 55px;
+    }
+
+    .highlight-item {
+        padding: 25px 20px;
+    }
+
+    .shoe-ending {
+        padding: 75px 6%;
+    }
+
+    .shoe-ending h2 {
+        letter-spacing: -1px;
+    }
+
+    .premium-footer {
+        padding: 45px 6% 25px;
+    }
+
+}
+
+
+/* REDUCED MOTION SUPPORT */
+
+@media (prefers-reduced-motion: reduce) {
+    .highlight-item,
+    .story-button,
+    .ending-button {
+        transition: none;
+    }
+}
+
+

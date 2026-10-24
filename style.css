@@ -1,0 +1,2678 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(0, 140, 255, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(0, 90, 255, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #726a6a 0%,
+            #10131b 50%,
+            #050505 100%
+        );
+
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Premium blue glow on product cards */
+
+.product-card {
+    background: rgba(18, 21, 29, 0.92);
+    border: 1px solid rgba(0, 140, 255, 0.18);
+    border-radius: 18px;
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #008cff;
+    box-shadow: 0 10px 35px rgba(0, 140, 255, 0.18);
+}
+
+/* Electric blue buttons */
+
+button,
+.shop-btn {
+    background: #008cff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover,
+.shop-btn:hover {
+    background: #0066ff;
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.4);
+}
+
+/* Premium Navbar */
+.navbar {
+    width: 100%;
+    min-height: 88px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111111;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    gap: 30px;
+}
+
+/* Brand Logo */
+.logo {
+    color: #d4af37;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #d5d5d5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d4af37;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Right Side Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icon-btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 27px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-btn:hover {
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+/* Cart Counter */
+.cart-btn {
+    font-size: 21px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -7px;
+    right: -9px;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d4af37;
+    color: #111111;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+    .navbar {
+        padding: 0 4%;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 17px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .navbar {
+        min-height: auto;
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        gap: 24px;
+        padding: 8px 0;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+}
+
+
+
+/* PREMIUM HERO BANNER */
+.hero-banner {
+    position: relative;
+    min-height: 570px;
+    margin: 25px 4%;
+    padding: 65px 7%;
+    background: #111;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
+    overflow: hidden;
+    border: 1px solid #29251b;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-tag {
+    color: #d4af37;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.hero-content h1 {
+    margin: 25px 0 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+    color: #d4af37;
+}
+
+.hero-content p {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    padding: 16px 23px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+.hero-btn span {
+    font-size: 20px;
+}
+
+.hero-offer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 35px;
+    padding-left: 15px;
+    border-left: 2px solid #d4af37;
+}
+
+.offer-label,
+.offer-note {
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.offer-label {
+    color: #d4af37;
+}
+
+.offer-label + strong {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* BANNER IMAGE */
+.hero-visual {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-circle {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(212, 175, 55, 0.08);
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+    width: 78%;
+    height: 690px;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: saturate(0.8);
+    box-shadow: 20px 20px 0 rgba(212, 175, 55, 0.12);
+}
+
+.hero-stamp {
+    position: absolute;
+    z-index: 2;
+    right: -8px;
+    top: 25px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(10deg);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.hero-stamp span:first-child {
+    font-size: 23px;
+}
+
+.hero-stamp span:nth-child(2) {
+    font-size: 9px;
+}
+
+.hero-stamp small {
+    margin-top: 4px;
+    font: 8px 'Manrope', sans-serif;
+}
+
+.hero-bottom-label {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* LIVE CLOCK */
+.hero-live {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ddd;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #64e69a;
+    box-shadow: 0 0 8px #64e69a;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 760px) {
+    .hero-banner {
+        margin: 15px 3%;
+        padding: 65px 25px 35px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .hero-image {
+        height: 320px;
+        width: 75%;
+    }
+
+    .hero-circle {
+        width: 270px;
+        height: 270px;
+    }
+
+    .hero-stamp {
+        right: 0;
+        width: 75px;
+        height: 75px;
+    }
+
+    .hero-bottom-label {
+        bottom: -8px;
+        font-size: 8px;
+    }
+
+    .hero-live {
+        right: 15px;
+        top: 15px;
+    }
+}
+
+
+
+
+
+/* STEP 3: PREMIUM T-SHIRT GRID */
+
+.shirt-section {
+    margin: 65px 4% 45px;
+    padding: 35px 0;
+}
+
+.shirt-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.shirt-eyebrow {
+    color: #a48628;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.shirt-heading h2 {
+    margin: 12px 0;
+    color: #111;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 46px);
+    letter-spacing: 1px;
+}
+
+.shirt-heading h2 span {
+    color: #a48628;
+}
+
+.shirt-heading p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Four-column grid */
+.shirt-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.shirt-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #ece9e1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shirt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.shirt-image-wrap {
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+    background: #f0efec;
+}
+
+.shirt-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.shirt-card:hover .shirt-image {
+    transform: scale(1.05);
+}
+
+.shirt-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    padding: 7px 9px;
+    background: #111;
+    color: #d4af37;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.shirt-info {
+    padding: 17px 14px;
+}
+
+.shirt-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.shirt-title-row h3 {
+    color: #171717;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.shirt-color {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.shirt-color.black { background: #111; }
+.shirt-color.white { background: #fff; }
+.shirt-color.olive { background: #68734b; }
+.shirt-color.blue { background: #263d64; }
+
+.shirt-description {
+    margin: 8px 0 12px;
+    color: #888;
+    font-size: 11px;
+}
+
+.shirt-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.shirt-price span {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.shirt-price b {
+    color: #27834a;
+    font-size: 9px;
+}
+
+.shirt-buy {
+    width: 100%;
+    min-height: 42px;
+    margin-top: 16px;
+    border: 1px solid #111;
+    background: #111;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.shirt-buy:hover {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #111;
+}
+
+.shirt-message {
+    min-height: 20px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #27834a;
+}
+
+/* Responsive grid */
+@media (max-width: 1000px) {
+    .shirt-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .shirt-section {
+        margin: 40px 3% 25px;
+    }
+
+    .shirt-grid {
+        gap: 12px;
+    }
+
+    .shirt-image-wrap {
+        height: 220px;
+    }
+
+    .shirt-info {
+        padding: 12px 9px;
+    }
+
+    .shirt-title-row h3 {
+        font-size: 11px;
+    }
+
+    .shirt-price {
+        gap: 5px;
+        font-size: 16px;
+    }
+}
+
+
+
+/* STEP 4: MEN'S T-SHIRTS */
+
+.mens-section {
+    margin: 80px 4% 60px;
+    color: #fff;
+}
+
+.mens-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.mens-tag {
+    color: #d4af37;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.mens-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 12px 0;
+    letter-spacing: 2px;
+}
+
+.mens-heading h2 span {
+    color: #efbe1d;
+}
+
+.mens-heading p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.mens-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    align-items: start;
+    width: 100%;
+}
+
+.mens-card {
+    min-width: 0;
+    margin: 0;
+}
+
+
+
+.mens-card {
+    background: #111;
+    border: 1px solid #252525;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mens-card:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+}
+
+.mens-image {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.mens-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.mens-card:hover .mens-image img {
+    transform: scale(1.05);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background: #d4af37;
+    color: #111;
+    padding: 7px 10px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.mens-info {
+    padding: 18px 15px;
+}
+
+.mens-info h3 {
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.mens-color {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 14px;
+}
+
+.mens-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.new-price {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.old-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.mens-buy {
+    width: 100%;
+    padding: 12px;
+    background: #d4af37;
+    border: 1px solid #d4af37;
+    color: #111;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mens-buy:hover {
+    background: transparent;
+    color: #d4af37;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .mens-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .mens-image {
+        height: 280px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .mens-section {
+        margin: 50px 4%;
+    }
+
+    .mens-grid {
+        gap: 10px;
+    }
+
+    .mens-image {
+        height: 210px;
+    }
+
+    .mens-info {
+        padding: 12px 10px;
+    }
+
+    .mens-info h3 {
+        font-size: 14px;
+    }
+
+    .new-price {
+        font-size: 15px;
+    }
+
+    .mens-price {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+/* STEP 5: PREMIUM T-SHIRTS */
+
+.premium-section {
+    margin: 35px 4% 40px;
+    color: #fff;
+}
+
+.premium-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.premium-heading > span {
+    color: #d4af37;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.premium-heading h2 {
+    margin: 9px 0;
+    font-size: clamp(26px, 3vw, 36px);
+    letter-spacing: 1px;
+}
+
+.premium-heading h2 b {
+    color: #d4af37;
+}
+
+.premium-heading p {
+    margin: 0;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.premium-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+.premium-card {
+    min-width: 0;
+    margin: 0;
+    background: #111;
+    border: 1px solid #292929;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.premium-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+}
+
+.premium-image {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.premium-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s;
+}
+
+.premium-card:hover .premium-image img {
+    transform: scale(1.04);
+}
+
+.premium-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background: #d4af37;
+    color: #111;
+    padding: 6px 9px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.premium-info {
+    padding: 14px 12px;
+}
+
+.premium-info h3 {
+    font-size: 15px;
+    margin: 0 0 7px;
+}
+
+.premium-info p {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
+
+.premium-price {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 13px;
+}
+
+.premium-price strong {
+    color: #d4af37;
+    font-size: 17px;
+}
+
+.premium-price del {
+    color: #888;
+    font-size: 12px;
+}
+
+.premium-buy {
+    width: 100%;
+    padding: 10px 6px;
+    border: 1px solid #d4af37;
+    background: #d4af37;
+    color: #111;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.premium-buy:hover {
+    background: transparent;
+    color: #d4af37;
+}
+
+@media (max-width: 900px) {
+    .premium-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .premium-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-section {
+        margin: 25px 4% 30px;
+    }
+
+    .premium-grid {
+        gap: 10px;
+    }
+
+    .premium-image {
+        height: 200px;
+    }
+
+    .premium-info {
+        padding: 11px 9px;
+    }
+}
+
+
+/*=== mens shirt section====*/
+
+/* ===== MEN'S SHIRTS COLLECTION ===== */
+
+.shirts-section {
+margin: 40px 4%;
+padding: 30px 24px;
+background: linear-gradient(135deg, #111417, #191A1D, #101214);
+border: 1px solid rgba(230, 184, 92, 0.2);
+border-radius: 14px;
+}
+
+.shirts-heading {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.shirts-tag {
+color: #E6B85C;
+font-size: 11px;
+letter-spacing: 4px;
+font-weight: bold;
+}
+
+.shirts-heading h2 {
+color: #F5F5F5;
+font-size: 34px;
+letter-spacing: 2px;
+margin: 12px 0;
+}
+
+.shirts-heading h2 span {
+color: #E6B85C;
+}
+
+.shirts-heading p {
+color: #AAAAAA;
+font-size: 14px;
+}
+
+.shirts-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+align-items: start;
+}
+
+.shirt-card {
+min-width: 0;
+overflow: hidden;
+background: #121518;
+border: 1px solid #292B2E;
+border-radius: 9px;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.shirt-card:hover {
+transform: translateY(-5px);
+border-color: #E6B85C;
+}
+
+.shirt-image {
+position: relative;
+width: 100%;
+height: 280px;
+overflow: hidden;
+background: #202225;
+}
+
+.shirt-image img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.4s ease;
+}
+
+.shirt-card:hover .shirt-image img {
+transform: scale(1.04);
+}
+
+.shirt-badge {
+position: absolute;
+top: 12px;
+left: 12px;
+background: #E6B85C;
+color: #111111;
+padding: 6px 9px;
+font-size: 10px;
+font-weight: bold;
+border-radius: 3px;
+}
+
+.shirt-info {
+padding: 16px;
+}
+
+.shirt-category {
+color: #AAAAAA;
+font-size: 10px;
+letter-spacing: 1px;
+margin: 0 0 9px;
+}
+
+.shirt-info h3 {
+color: #F5F5F5;
+font-size: 16px;
+margin: 0 0 12px;
+}
+
+/* PRICE AND DISCOUNT */
+
+.shirt-price {
+margin: 12px 0 16px;
+}
+
+.old-price {
+color: #999999;
+text-decoration: line-through;
+font-size: 14px;
+margin-right: 8px;
+}
+
+.discount-badge {
+display: inline-block;
+color: #63D471;
+font-size: 11px;
+font-weight: bold;
+}
+
+.final-price {
+color: #E6B85C;
+font-size: 23px;
+font-weight: bold;
+margin-top: 7px;
+}
+
+.shirt-btn {
+display: block;
+width: 100%;
+padding: 12px 8px;
+background: #E6B85C;
+color: #111111;
+border: 1px solid #E6B85C;
+border-radius: 4px;
+font-size: 11px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.25s ease;
+}
+
+.shirt-btn:hover {
+background: transparent;
+color: #E6B85C;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+.shirts-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 15px;
+}
+
+
+.shirt-image {
+    height: 260px;
+}
+
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+.shirts-section {
+margin: 25px 3%;
+padding: 22px 12px;
+}
+
+
+.shirts-heading h2 {
+    font-size: 27px;
+}
+
+.shirts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.shirt-image {
+    height: 190px;
+}
+
+.shirt-info {
+    padding: 10px;
+}
+
+.shirt-info h3 {
+    font-size: 13px;
+}
+
+.final-price {
+    font-size: 20px;
+}
+
+.shirt-btn {
+    font-size: 10px;
+    padding: 10px 4px;
+}
+
+
+}
+
+/* ===== PREMIUM SHIRTS COLLECTION ===== */
+
+.premium-shirts-section {
+margin: 40px 4%;
+padding: 32px 24px;
+background: linear-gradient(135deg, #101113, #1C1A18, #101113);
+border: 1px solid rgba(230, 184, 92, 0.28);
+border-radius: 14px;
+}
+
+.premium-shirts-heading {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.premium-shirts-tag {
+color: #E6B85C;
+font-size: 11px;
+letter-spacing: 4px;
+font-weight: bold;
+}
+
+.premium-shirts-heading h2 {
+color: #F5F5F5;
+font-size: 34px;
+letter-spacing: 2px;
+margin: 12px 0;
+}
+
+.premium-shirts-heading h2 span {
+color: #E6B85C;
+}
+
+.premium-shirts-heading p {
+color: #AAAAAA;
+font-size: 14px;
+}
+
+.premium-shirts-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+align-items: start;
+}
+
+.premium-shirt-card {
+min-width: 0;
+overflow: hidden;
+background: #141414;
+border: 1px solid #34302A;
+border-radius: 9px;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.premium-shirt-card:hover {
+transform: translateY(-5px);
+border-color: #E6B85C;
+}
+
+.premium-shirt-image {
+position: relative;
+height: 280px;
+overflow: hidden;
+background: #222222;
+}
+
+.premium-shirt-image img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.4s ease;
+}
+
+.premium-shirt-card:hover .premium-shirt-image img {
+transform: scale(1.04);
+}
+
+.premium-shirt-badge {
+position: absolute;
+top: 12px;
+left: 12px;
+padding: 6px 9px;
+background: #E6B85C;
+color: #111111;
+font-size: 10px;
+font-weight: bold;
+border-radius: 3px;
+}
+
+.premium-shirt-info {
+padding: 16px;
+}
+
+.premium-shirt-info p {
+color: #B8A57E;
+font-size: 10px;
+letter-spacing: 1px;
+margin: 0 0 9px;
+}
+
+.premium-shirt-info h3 {
+color: #F5F5F5;
+font-size: 16px;
+margin: 0 0 12px;
+}
+
+.premium-old-price {
+color: #999999;
+text-decoration: line-through;
+font-size: 14px;
+margin-right: 7px;
+}
+
+.premium-discount {
+color: #63D471;
+font-size: 11px;
+font-weight: bold;
+}
+
+.premium-final-price {
+color: #E6B85C;
+font-size: 23px;
+font-weight: bold;
+margin: 8px 0 16px;
+}
+
+.premium-shirt-btn {
+display: block;
+width: 100%;
+padding: 12px 8px;
+background: #E6B85C;
+color: #111111;
+border: 1px solid #E6B85C;
+border-radius: 4px;
+font-size: 11px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.25s ease;
+}
+
+.premium-shirt-btn:hover {
+background: transparent;
+color: #E6B85C;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+.premium-shirts-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 15px;
+}
+
+
+.premium-shirt-image {
+    height: 260px;
+}
+
+
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+.premium-shirts-section {
+margin: 25px 3%;
+padding: 22px 12px;
+}
+
+
+.premium-shirts-heading h2 {
+    font-size: 27px;
+}
+
+.premium-shirts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.premium-shirt-image {
+    height: 190px;
+}
+
+.premium-shirt-info {
+    padding: 10px;
+}
+
+.premium-shirt-info h3 {
+    font-size: 13px;
+}
+
+.premium-final-price {
+    font-size: 20px;
+}
+
+.premium-shirt-btn {
+    font-size: 10px;
+    padding: 10px 4px;
+}
+
+
+}
+/*-------------------------------pant sale start -------------------------------------------------------------------------------*/
+
+
+/* ===== PANTS SALE BANNER ===== */
+
+.pants-sale-banner {
+display: grid;
+grid-template-columns: 1.05fr 0.95fr;
+align-items: stretch;
+margin: 40px 4%;
+min-height: 460px;
+overflow: hidden;
+background: linear-gradient(120deg, #080909, #171614);
+border: 1px solid rgba(230, 184, 92, 0.4);
+border-radius: 12px;
+box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.pants-banner-content {
+padding: 35px 30px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+}
+
+.pants-brand {
+color: #E6B85C;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 4px;
+margin-bottom: 15px;
+}
+
+.pants-banner-content h2 {
+color: #F5F5F5;
+font-size: clamp(28px, 3.5vw, 45px);
+letter-spacing: 4px;
+margin: 0 0 5px;
+}
+
+.pants-banner-content h2 span {
+color: #E6B85C;
+}
+
+.pants-discount {
+display: flex;
+align-items: center;
+gap: 12px;
+margin: 0 0 12px;
+}
+
+.discount-number {
+color: #E6B85C;
+font-size: clamp(80px, 10vw, 135px);
+line-height: 1;
+font-weight: 900;
+letter-spacing: -5px;
+}
+
+.discount-off {
+color: #FFFFFF;
+font-size: clamp(35px, 4vw, 55px);
+font-weight: 900;
+}
+
+.pants-banner-description {
+color: #D1D1D1;
+font-size: 11px;
+line-height: 1.8;
+letter-spacing: 1.5px;
+margin: 10px 0 20px;
+}
+
+.pants-limited-offer {
+border-left: 4px solid #E6B85C;
+padding-left: 14px;
+margin-bottom: 18px;
+}
+
+.offer-label {
+display: inline-block;
+color: #111111;
+background: #E6B85C;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1px;
+padding: 7px 12px;
+}
+
+.pants-limited-offer h3 {
+color: #FFFFFF;
+font-size: 27px;
+font-style: italic;
+margin: 8px 0 0;
+letter-spacing: 2px;
+}
+
+/* LARGE COUNTDOWN TIMER */
+
+.pants-timer-box {
+margin-bottom: 22px;
+}
+
+.timer-heading {
+display: block;
+color: #E6B85C;
+font-size: 12px;
+letter-spacing: 2px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.pants-timer {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.timer-unit {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: #1C1B18;
+border: 1px solid #62502C;
+border-radius: 6px;
+width: 75px;
+height: 75px;
+}
+
+.timer-unit span {
+color: #E6B85C;
+font-size: 32px;
+font-weight: 800;
+line-height: 1.1;
+}
+
+.timer-unit small {
+color: #D1D1D1;
+font-size: 9px;
+letter-spacing: 1px;
+margin-top: 6px;
+}
+
+.timer-colon {
+color: #E6B85C;
+font-size: 28px;
+font-weight: bold;
+}
+
+.pants-shop-btn {
+display: inline-block;
+padding: 14px 24px;
+background: #E6B85C;
+color: #111111;
+text-decoration: none;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1px;
+border: 1px solid #E6B85C;
+border-radius: 4px;
+transition: 0.3s ease;
+}
+
+.pants-shop-btn:hover {
+color: #E6B85C;
+background: transparent;
+}
+
+/* BANNER IMAGE */
+
+.pants-banner-image {
+position: relative;
+min-height: 460px;
+overflow: hidden;
+background: #242321;
+}
+
+.pants-banner-image img {
+display: block;
+width: 100%;
+height: 100%;
+min-height: 460px;
+object-fit: cover;
+object-position: center;
+}
+
+.pants-image-label {
+position: absolute;
+right: 18px;
+bottom: 20px;
+padding: 18px;
+background: rgba(10, 10, 10, 0.78);
+border-left: 3px solid #E6B85C;
+}
+
+.pants-image-label span {
+color: #E6B85C;
+font-size: 10px;
+letter-spacing: 2px;
+}
+
+.pants-image-label h3 {
+color: #FFFFFF;
+font-size: 20px;
+line-height: 1.4;
+margin: 8px 0 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+.pants-sale-banner {
+grid-template-columns: 1fr 0.8fr;
+margin: 30px 3%;
+}
+
+
+.pants-banner-content {
+    padding: 25px 18px;
+}
+
+.timer-unit {
+    width: 60px;
+    height: 65px;
+}
+
+.timer-unit span {
+    font-size: 25px;
+}
+
+.pants-banner-image,
+.pants-banner-image img {
+    min-height: 150px;
+}
+
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+.pants-sale-banner {
+grid-template-columns: 1fr;
+margin: 25px 3%;
+}
+
+
+.pants-banner-content {
+    padding: 25px 18px;
+}
+
+.pants-banner-content h2 {
+    font-size: 32px;
+}
+
+.discount-number {
+    font-size: 100px;
+}
+
+.discount-off {
+    font-size: 40px;
+}
+
+.pants-banner-description {
+    font-size: 10px;
+}
+
+.timer-unit {
+    width: 70px;
+    height: 70px;
+}
+
+.timer-unit span {
+    font-size: 29px;
+}
+
+.pants-banner-image,
+pants-banner-image img {
+     color: #080909;
+   
+
+}
+
+}
+
+/*-------------------------------------------step 1----------------------------------------------------*/
+/* ===== MEN'S PANTS SHOPPING COLLECTION ===== */
+
+.pants-products-section {
+margin: 40px 4%;
+padding: 30px 24px;
+background: linear-gradient(135deg, #111417, #191A1D, #101214);
+border: 1px solid rgba(230, 184, 92, 0.22);
+border-radius: 14px;
+}
+
+.pants-products-heading {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.pants-products-tag {
+color: #E6B85C;
+font-size: 11px;
+letter-spacing: 4px;
+font-weight: bold;
+}
+
+.pants-products-heading h2 {
+color: #F5F5F5;
+font-size: 34px;
+letter-spacing: 2px;
+margin: 12px 0;
+}
+
+.pants-products-heading h2 span {
+color: #E6B85C;
+}
+
+.pants-products-heading p {
+color: #AAAAAA;
+font-size: 14px;
+}
+
+.pants-products-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+align-items: start;
+}
+
+.pants-product-card {
+min-width: 0;
+overflow: hidden;
+background: #121518;
+border: 1px solid #292B2E;
+border-radius: 9px;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pants-product-card:hover {
+transform: translateY(-5px);
+border-color: #E6B85C;
+}
+
+.pants-product-image {
+position: relative;
+width: 100%;
+height: 350px;
+overflow: hidden;
+background: #202225;
+}
+
+.pants-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.pants-product-card:hover .pants-product-image img {
+transform: scale(1.04);
+}
+
+.pants-product-badge {
+position: absolute;
+top: 12px;
+left: 12px;
+background: #E6B85C;
+color: #111111;
+padding: 6px 9px;
+font-size: 10px;
+font-weight: bold;
+border-radius: 3px;
+}
+
+.pants-product-info {
+padding: 16px;
+}
+
+.pants-product-category {
+color: #AAAAAA;
+font-size: 10px;
+letter-spacing: 1px;
+margin: 0 0 9px;
+}
+
+.pants-product-info h3 {
+color: #F5F5F5;
+font-size: 16px;
+margin: 0 0 12px;
+}
+
+.pants-product-pricing {
+margin: 12px 0 16px;
+}
+
+.pants-product-old {
+color: #999999;
+text-decoration: line-through;
+font-size: 14px;
+margin-right: 7px;
+}
+
+.pants-product-discount {
+color: #63D471;
+font-size: 11px;
+font-weight: bold;
+}
+
+.pants-product-final {
+color: #E6B85C;
+font-size: 23px;
+font-weight: bold;
+margin-top: 8px;
+}
+
+.pants-product-btn {
+display: block;
+width: 100%;
+padding: 12px 8px;
+background: #E6B85C;
+color: #111111;
+border: 1px solid #E6B85C;
+border-radius: 4px;
+font-size: 11px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.25s ease;
+}
+
+.pants-product-btn:hover {
+background: transparent;
+color: #E6B85C;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+.pants-products-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 15px;
+}
+
+
+.pants-product-image {
+    height: 260px;
+}
+
+
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+.pants-products-section {
+margin: 25px 3%;
+padding: 22px 12px;
+}
+
+
+.pants-products-heading h2 {
+    font-size: 27px;
+}
+
+.pants-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.pants-product-image {
+    height: 190px;
+}
+
+.pants-product-info {
+    padding: 10px;
+}
+
+.pants-product-info h3 {
+    font-size: 13px;
+}
+
+.pants-product-final {
+    font-size: 20px;
+}
+
+.pants-product-btn {
+    font-size: 10px;
+    padding: 10px 4px;
+}
+
+
+}
+/*------------------------------------------------------------------scetion 2-------------------------------------------*/
+
+.pants-products-section {
+    width: 100%;
+    padding: 60px 5%;
+    background: #0a0a0a;
+    box-sizing: border-box;
+}
+
+.pants-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.pants-product-card {
+    min-width: 0;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pants-product-card:hover {
+    transform: translateY(-7px);
+    border-color: #e6b85c;
+}
+
+.pants-product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #202225;
+}
+
+.pants-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.pants-sale-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    background: #e6b85c;
+    color: #111;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 4px;
+}
+
+.pants-product-info {
+    padding: 20px;
+}
+
+.pants-product-info h3 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 18px;
+}
+
+.pants-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pants-old-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+.pants-final-price {
+    color: #e6b85c;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.pants-product-btn {
+    width: 100%;
+    padding: 14px;
+    background: #e6b85c;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.pants-product-btn:hover {
+    background: #fff;
+}
+
+@media (max-width: 1000px) {
+    .pants-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .pants-products-section {
+        padding: 35px 12px;
+    }
+
+    .pants-products-grid {
+        gap: 12px;
+    }
+
+    .pants-product-image {
+        height: 350px;
+    }
+
+    .pants-product-info {
+        padding: 12px;
+    }
+
+    .pants-product-info h3 {
+        font-size: 14px;
+    }
+
+    .pants-final-price {
+        font-size: 19px;
+    }
+}
+/*-----------------section part --------------------------------------------*/
+
+/* ========================================
+   US FOREVER — ENDING SECTIONS
+   Why Choose Us + Reviews + Newsletter
+======================================== */
+
+.uf-benefits,
+.uf-reviews,
+.uf-newsletter {
+    --uf-gold: #e6b85c;
+    --uf-bg: #0a0a0a;
+    --uf-card: #141414;
+    --uf-border: #292929;
+
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.uf-benefits *,
+.uf-reviews *,
+.uf-newsletter * {
+    box-sizing: border-box;
+}
+
+/* SHARED SECTION HEADING */
+
+.uf-section-heading {
+    text-align: center;
+    margin: 0 auto 45px;
+    max-width: 750px;
+}
+
+.uf-eyebrow {
+    display: inline-block;
+    color: var(--uf-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+.uf-section-heading h2 {
+    margin: 14px 0;
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.uf-section-heading h2 span {
+    color: var(--uf-gold);
+}
+
+.uf-section-heading > p {
+    color: #a5a5a5;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   1. WHY CHOOSE US
+======================================== */
+
+.uf-benefits {
+    padding: 85px 5%;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(230, 184, 92, 0.07),
+            transparent 55%
+        ),
+        #0a0a0a;
+}
+
+.uf-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.uf-benefit-card {
+    min-width: 0;
+    padding: 30px 18px;
+    text-align: center;
+    background: linear-gradient(145deg, #181818, #101010);
+    border: 1px solid #292929;
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.uf-benefit-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--uf-gold);
+    background: #19170f;
+}
+
+.uf-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 22px;
+    border: 1px solid rgba(230, 184, 92, 0.45);
+    border-radius: 50%;
+    color: var(--uf-gold);
+    font-size: 29px;
+    background: rgba(230, 184, 92, 0.06);
+}
+
+.uf-benefit-card h3 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.uf-benefit-card p {
+    margin: 0;
+    color: #a5a5a5;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   2. CUSTOMER REVIEWS
+======================================== */
+
+.uf-reviews {
+    padding: 85px 5%;
+    background: #101010;
+    border-top: 1px solid #1e1e1e;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.uf-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.uf-review-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 25px 22px;
+    background: linear-gradient(145deg, #191919, #121212);
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.uf-review-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(230, 184, 92, 0.7);
+}
+
+.uf-review-stars {
+    margin-bottom: 20px;
+    color: var(--uf-gold);
+    font-size: 19px;
+    letter-spacing: 3px;
+}
+
+.uf-review-text {
+    flex: 1;
+    margin: 0 0 25px;
+    color: #c1c1c1;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.uf-review-customer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid #303030;
+}
+
+.uf-review-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: #111111;
+    background: var(--uf-gold);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.uf-review-customer h3 {
+    margin: 0 0 6px;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.uf-review-customer span {
+    color: #929292;
+    font-size: 11px;
+}
+
+.uf-review-note {
+    margin: 25px auto 0;
+    text-align: center;
+    color: #777777;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   3. NEWSLETTER
+======================================== */
+
+.uf-newsletter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    min-height: 370px;
+    padding: 70px 8%;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 80% 50%,
+            rgba(230, 184, 92, 0.12),
+            transparent 48%
+        ),
+        linear-gradient(115deg, #15130e, #0b0b0b 65%);
+    border-top: 1px solid #393020;
+}
+
+.uf-newsletter-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 590px;
+}
+
+.uf-newsletter-content h2 {
+    margin: 18px 0;
+    color: #ffffff;
+    font-size: clamp(34px, 5vw, 53px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 1px;
+}
+
+.uf-newsletter-content h2 span {
+    color: var(--uf-gold);
+}
+
+.uf-newsletter-content > p:not(.uf-newsletter-message) {
+    max-width: 470px;
+    margin: 0 0 25px;
+    color: #b0b0b0;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.uf-newsletter-form {
+    display: flex;
+    width: 100%;
+    max-width: 540px;
+    gap: 10px;
+}
+
+.uf-newsletter-form input {
+    flex: 1;
+    min-width: 0;
+    height: 52px;
+    padding: 0 16px;
+    color: #ffffff;
+    background: #171717;
+    border: 1px solid #454035;
+    border-radius: 4px;
+    outline: none;
+    font-size: 13px;
+}
+
+.uf-newsletter-form input::placeholder {
+    color: #888888;
+}
+
+.uf-newsletter-form input:focus {
+    border-color: var(--uf-gold);
+}
+
+.uf-newsletter-form button {
+    flex-shrink: 0;
+    min-height: 52px;
+    padding: 0 20px;
+    color: #111111;
+    background: var(--uf-gold);
+    border: 1px solid var(--uf-gold);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.uf-newsletter-form button:hover {
+    color: #ffffff;
+    background: transparent;
+}
+
+.uf-newsletter-message {
+    min-height: 18px;
+    margin: 12px 0 0;
+    color: var(--uf-gold);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.uf-newsletter-trust {
+    margin-top: 18px;
+    color: #8d8067;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 2;
+}
+
+.uf-newsletter-decoration {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    display: flex;
+    align-items: center;
+    transform: translateY(-50%) rotate(-8deg);
+    color: rgba(230, 184, 92, 0.07);
+    font-size: clamp(120px, 22vw, 270px);
+    font-weight: 900;
+    letter-spacing: -20px;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1050px) {
+    .uf-benefits-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .uf-reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .uf-newsletter {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+    .uf-benefits,
+    .uf-reviews {
+        padding: 55px 16px;
+    }
+
+    .uf-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .uf-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .uf-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .uf-section-heading > p {
+        font-size: 12px;
+    }
+
+    .uf-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .uf-benefit-card {
+        padding: 22px 12px;
+    }
+
+    .uf-benefit-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+        font-size: 24px;
+    }
+
+    .uf-benefit-card h3 {
+        font-size: 13px;
+    }
+
+    .uf-benefit-card p {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+
+    .uf-reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .uf-review-card {
+        padding: 22px 18px;
+    }
+
+    .uf-review-text {
+        font-size: 12px;
+    }
+
+    .uf-newsletter {
+        min-height: 0;
+        padding: 55px 20px;
+    }
+
+    .uf-newsletter-content h2 {
+        font-size: 35px;
+    }
+
+    .uf-newsletter-content > p:not(.uf-newsletter-message) {
+        font-size: 12px;
+    }
+
+    .uf-newsletter-form {
+        flex-direction: column;
+    }
+
+    .uf-newsletter-form input,
+    .uf-newsletter-form button {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .uf-newsletter-decoration {
+        top: 15%;
+        right: 8%;
+        font-size: 100px;
+        opacity: 0.7;
+    }
+
+    .uf-newsletter-trust {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
+
+/*fotter created-------------------------------------------------------
+/* US FOREVER CONTINUOUS MOVING TEXT */
+
+.uf-moving-strip {
+    width: 100%;
+    overflow: hidden;
+    background: #080808;
+    border-top: 1px solid rgba(230, 184, 92, 0.3);
+    border-bottom: 1px solid rgba(230, 184, 92, 0.3);
+    padding: 24px 0;
+}
+
+.uf-moving-track {
+    display: flex;
+    width: max-content;
+    animation: usForeverMove 15s linear infinite;
+}
+
+.uf-moving-track span {
+    flex-shrink: 0;
+    padding-right: 45px;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #e6b85c;
+    white-space: nowrap;
+    text-shadow: 0 0 15px rgba(230, 184, 92, 0.2);
+}
+
+/* Text moves continuously from right to left */
+
+@keyframes usForeverMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* WEBSITE CREATOR CREDIT */
+
+.uf-creator-credit {
+    background: #050505;
+    padding: 35px 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.uf-creator-credit p {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+.uf-creator-credit h2 {
+    color: #fff;
+    font-size: clamp(24px, 5vw, 38px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.uf-creator-credit h2 span {
+    color: #e6b85c;
+}
+
+.uf-creator-credit small {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .uf-moving-strip {
+        padding: 18px 0;
+    }
+
+    .uf-moving-track span {
+        padding-right: 25px;
+        letter-spacing: 3px;
+    }
+
+    .uf-creator-credit p {
+        letter-spacing: 3px;
+    }
+}
+
+
+
+
+
+

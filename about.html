@@ -1,0 +1,832 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | US FOREVER</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #e6b85c;
+    --black: #080808;
+    --card: #131313;
+    --white: #f5f5f5;
+    --gray: #aaa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    min-height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    border-bottom: 1px solid #332817;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.menu-btn {
+    display: none;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid var(--gold);
+    padding: 8px 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    min-height: 490px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #080808 8%, rgba(8,8,8,.94) 42%, rgba(8,8,8,.25)),
+        url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=85')
+        center/cover no-repeat;
+    border-bottom: 1px solid #332817;
+}
+
+.hero-content {
+    max-width: 690px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 570px;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 32px;
+}
+
+.gold-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: var(--gold);
+    color: #080808;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: 1px solid var(--gold);
+    transition: .3s;
+}
+
+.gold-btn:hover {
+    color: var(--gold);
+    background: transparent;
+    transform: translateY(-3px);
+}
+
+/* COMMON SECTION */
+.section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    color: var(--gold);
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* OUR STORY */
+.story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.story-image {
+    min-height: 390px;
+    background:
+        url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85')
+        center/cover no-repeat;
+    border: 1px solid #42331c;
+}
+
+.story-text .eyebrow {
+    margin-bottom: 18px;
+}
+
+.story-text h2 {
+    font-size: clamp(27px, 4vw, 40px);
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.story-text h2 span {
+    color: var(--gold);
+}
+
+.story-text p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+/* VALUES */
+.values {
+    background: #0d0d0d;
+    border-top: 1px solid #211d16;
+    border-bottom: 1px solid #211d16;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.value-card {
+    background: var(--card);
+    border: 1px solid #29251e;
+    padding: 32px 25px;
+    text-align: center;
+    transition: .3s;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.value-icon {
+    color: var(--gold);
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.value-card p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* SHOP CATEGORIES */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.category-card {
+    position: relative;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+    overflow: hidden;
+    border: 1px solid #332817;
+    background: #141414;
+}
+
+.category-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #080808 0%, rgba(8,8,8,.15) 100%);
+    z-index: 1;
+    transition: .4s;
+}
+
+.category-card:hover::before {
+    background: linear-gradient(0deg, #080808 0%, rgba(8,8,8,.4) 100%);
+}
+
+.category-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s;
+}
+
+.category-card:hover img {
+    transform: scale(1.07);
+}
+
+.category-content {
+    position: relative;
+    z-index: 2;
+}
+
+.category-content .eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.category-content h3 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.category-link {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.category-link:hover {
+    color: white;
+}
+
+/* BRAND PROMISE */
+.promise {
+    text-align: center;
+    background: linear-gradient(135deg, #18140c, #080808 70%);
+    border-top: 1px solid #332817;
+    border-bottom: 1px solid #332817;
+}
+
+.promise h2 {
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 22px;
+}
+
+.promise h2 span {
+    color: var(--gold);
+}
+
+.promise p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #bbb;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* FOOTER */
+.footer {
+    padding: 50px 7% 25px;
+    background: #050505;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #27231c;
+}
+
+.footer-brand {
+    max-width: 380px;
+}
+
+.footer-brand .logo {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-links h3 {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.footer-links a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    color: #777;
+    font-size: 11px;
+    line-height: 2;
+}
+
+.footer-bottom strong {
+    color: var(--gold);
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .story-layout {
+        gap: 30px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        min-height: 72px;
+    }
+
+    .logo {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #101010;
+        padding: 25px 6%;
+        border-bottom: 1px solid var(--gold);
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 23px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 60px 6%;
+        background-position: 60% center;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image {
+        min-height: 280px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        min-height: 300px;
+    }
+
+    .footer {
+        padding: 40px 6% 20px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <a href="index.html" class="logo">US <span>FOREVER</span></a>
+
+    <button class="menu-btn" id="menuBtn"
+        aria-label="Open navigation" aria-expanded="false"
+        aria-controls="navLinks">☰</button>
+
+    <nav>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="shoes.html">SHOES</a></li>
+            <li><a href="watch.html">WATCHES</a></li>
+            <li><a href="about.html" class="active">ABOUT</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="eyebrow">WELCOME TO OUR WORLD</div>
+
+        <h1>MORE THAN<br>JUST <span>STYLE.</span></h1>
+
+        <p>
+            Welcome to US FOREVER — a fashion destination built around
+            personal style, everyday confidence and modern design.
+            Discover clothing, footwear and watches selected to help
+            you express who you are.
+        </p>
+
+        <a href="index.html" class="gold-btn">EXPLORE OUR WORLD →</a>
+    </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section">
+    <div class="story-layout reveal">
+
+        <div class="story-image"
+            role="img" aria-label="Fashion clothing collection"></div>
+
+        <div class="story-text">
+            <div class="eyebrow">OUR STORY</div>
+
+            <h2>YOUR STYLE.<br><span>YOUR IDENTITY.</span></h2>
+
+            <p>
+                US FOREVER is built on a simple idea: style should feel
+                personal. What you wear can express your personality,
+                your mood and the confidence you bring to every day.
+            </p>
+
+            <p>
+                Our store brings together fashion, shoes and watches
+                in one convenient place, making it easier to explore
+                different looks and find pieces that suit your taste.
+            </p>
+
+            <p>
+                We believe that great style is not just about following
+                trends. It is about creating a look that feels like you.
+            </p>
+
+            <a href="index.html" class="gold-btn">DISCOVER US FOREVER</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- OUR VALUES -->
+<section class="section values">
+    <div class="section-heading reveal">
+        <div class="eyebrow">WHAT DEFINES US</div>
+        <h2>THE US FOREVER <span>VALUES</span></h2>
+        <p>
+            The principles behind our vision of fashion and everyday style.
+        </p>
+    </div>
+
+    <div class="values-grid">
+
+        <article class="value-card reveal">
+            <div class="value-icon">✦</div>
+            <h3>PERSONAL STYLE</h3>
+            <p>
+                Explore different looks and choose pieces that express
+                your own personality.
+            </p>
+        </article>
+
+        <article class="value-card reveal">
+            <div class="value-icon">◇</div>
+            <h3>MODERN DESIGN</h3>
+            <p>
+                Discover contemporary styles designed to complement
+                your everyday wardrobe.
+            </p>
+        </article>
+
+        <article class="value-card reveal">
+            <div class="value-icon">✧</div>
+            <h3>EVERYDAY CONFIDENCE</h3>
+            <p>
+                Find styles that help you feel comfortable, confident
+                and ready for your next moment.
+            </p>
+        </article>
+
+    </div>
+</section>
+
+<!-- OUR CATEGORIES -->
+<section class="section">
+    <div class="section-heading reveal">
+        <div class="eyebrow">EXPLORE OUR COLLECTIONS</div>
+        <h2>FIND YOUR <span>STYLE</span></h2>
+        <p>
+            From everyday fashion to footwear and watches,
+            explore our different collections.
+        </p>
+    </div>
+
+    <div class="category-grid">
+
+        <!-- CLOTHING -->
+        <article class="category-card reveal">
+            <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85"
+                alt="Fashion clothing collection"
+                loading="lazy">
+
+            <div class="category-content">
+                <div class="eyebrow">YOUR EVERYDAY LOOK</div>
+                <h3>US FOREVER</h3>
+                <a href="index.html" class="category-link">
+                    EXPLORE FASHION →
+                </a>
+            </div>
+        </article>
+
+        <!-- SHOES -->
+        <article class="category-card reveal">
+            <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85"
+                alt="Sport-inspired footwear"
+                loading="lazy">
+
+            <div class="category-content">
+                <div class="eyebrow">STEP INTO STYLE</div>
+                <h3>US SHOES</h3>
+                <a href="shoes.html" class="category-link">
+                    EXPLORE SHOES →
+                </a>
+            </div>
+        </article>
+
+        <!-- WATCHES -->
+        <article class="category-card reveal">
+            <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=85"
+                alt="Modern wristwatch"
+                loading="lazy">
+
+            <div class="category-content">
+                <div class="eyebrow">EVERY SECOND MATTERS</div>
+                <h3>US WATCHES</h3>
+                <a href="watches.html" class="category-link">
+                    EXPLORE WATCHES →
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- BRAND PROMISE -->
+<section class="section promise">
+    <div class="reveal">
+        <div class="eyebrow">THE US FOREVER MINDSET</div>
+
+        <h2>OWN YOUR LOOK.<br><span>MAKE IT YOURS.</span></h2>
+
+        <p>
+            Fashion is personal. Your shoes, your watch and your outfit
+            all contribute to the way you express yourself.
+            Explore US FOREVER, discover your favourite styles and
+            create a look that feels uniquely yours.
+        </p>
+
+        <a href="index.html" class="gold-btn">START EXPLORING →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo">US <span>FOREVER</span></a>
+
+            <p>
+                A modern fashion destination for clothing, shoes and
+                watches. Explore your style and express your identity
+                with US FOREVER.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>QUICK LINKS</h3>
+            <a href="index.html">Home</a>
+            <a href="shoes.html">Shoes Collection</a>
+            <a href="watches.html">Watches Collection</a>
+            <a href="about.html">About Us</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>OUR PHILOSOPHY</h3>
+            <a href="#story">Our Story</a>
+            <a href="#values">Our Values</a>
+            <a href="#collections">Our Collections</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>Website Created by <strong>Rohit Rathod</strong></p>
+        <p>© 2026 US FOREVER. All rights reserved.</p>
+        <p>Product images are illustrative. Product availability and details should be verified before purchase.</p>
+    </div>
+
+</footer>
+
+<script>
+// MOBILE NAVIGATION
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+    const opened = navLinks.classList.toggle("open");
+
+    menuBtn.textContent = opened ? "✕" : "☰";
+    menuBtn.setAttribute("aria-expanded", opened);
+    menuBtn.setAttribute(
+        "aria-label",
+        opened ? "Close navigation" : "Open navigation"
+    );
+});
+
+navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
+    });
+});
+
+// SCROLL REVEAL ANIMATION
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    revealElements.forEach(function (element) {
+        observer.observe(element);
+    });
+} else {
+    revealElements.forEach(function (element) {
+        element.classList.add("visible");
+    });
+}
+</script>
+    <script src="error.js" defer></script>
+
+
+</body>
+</html>

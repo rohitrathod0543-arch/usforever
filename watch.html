@@ -1,0 +1,1167 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US WATCHES | Luxury Collection</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #e6b85c;
+    --black: #080808;
+    --card: #141414;
+    --white: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292319;
+    background: #080808;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.cart-count {
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* HERO BANNER */
+.hero {
+    min-height: 470px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background:
+        linear-gradient(90deg, #080808 10%, rgba(8,8,8,.91) 42%, rgba(8,8,8,.3)),
+        url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1800&q=85')
+        center/cover no-repeat;
+    border-bottom: 1px solid #302719;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.12;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 480px;
+    color: #c4c4c4;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.gold-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #090909;
+    padding: 15px 25px;
+    border: none;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gold-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    align-self: flex-end;
+    color: #e6b85c;
+    font-size: 10px;
+    letter-spacing: 3px;
+    writing-mode: vertical-rl;
+}
+
+/* COLLECTION */
+.collection {
+    padding: 75px 7%;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 38px;
+}
+
+.section-top h2 {
+    font-size: clamp(25px, 4vw, 38px);
+    margin-top: 12px;
+}
+
+.section-top h2 span {
+    color: var(--gold);
+}
+
+.section-top p {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.watch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.watch-card {
+    background: var(--card);
+    border: 1px solid #28251f;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.watch-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px #000;
+}
+
+.image-box {
+    height: 245px;
+    position: relative;
+    background: #1c1b18;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.watch-card:hover .image-box img {
+    transform: scale(1.06);
+}
+
+.discount {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--gold);
+    color: #080808;
+    padding: 8px 10px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.watch-info {
+    padding: 20px 17px;
+}
+
+.category {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.watch-info h3 {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.description {
+    color: #aaa;
+    font-size: 11px;
+    line-height: 1.7;
+    min-height: 38px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 17px 0;
+}
+
+.old-price {
+    color: #858585;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.new-price {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 13px 8px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.add-btn:hover {
+    background: var(--gold);
+    color: #080808;
+}
+
+.add-btn:disabled {
+    opacity: .8;
+    cursor: default;
+}
+
+/* BRAND STORY */
+.story {
+    padding: 65px 8%;
+    text-align: center;
+    border-top: 1px solid #292319;
+    border-bottom: 1px solid #292319;
+    background: linear-gradient(135deg, #15120c, #080808 60%);
+}
+
+.story h2 {
+    font-size: clamp(25px, 4vw, 40px);
+    margin: 15px 0;
+}
+
+.story h2 span {
+    color: var(--gold);
+}
+
+.story p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer {
+    padding: 35px 7%;
+    text-align: center;
+    color: #888;
+    font-size: 11px;
+    line-height: 2;
+}
+
+footer .logo {
+    margin-bottom: 12px;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+/* CART PANEL */
+.cart-panel {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    right: 20px;
+    top: 95px;
+    width: min(360px, calc(100% - 40px));
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 22px;
+    background: #151515;
+    border: 1px solid var(--gold);
+    box-shadow: 0 10px 40px #000;
+}
+
+.cart-panel.open {
+    display: block;
+}
+
+.cart-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.cart-heading h3 {
+    color: var(--gold);
+}
+
+.close-cart {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+    font-size: 12px;
+}
+
+.cart-item span:last-child {
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.cart-total {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.cart-total strong {
+    color: var(--gold);
+}
+
+.empty-cart {
+    color: #aaa;
+    font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+    .watch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .image-box {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0 5%;
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 410px;
+        padding: 55px 6%;
+        background-position: 60% center;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .collection {
+        padding: 50px 5%;
+    }
+
+    .section-top {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .watch-grid {
+        gap: 12px;
+    }
+
+    .image-box {
+        height: 175px;
+    }
+
+    .watch-info {
+        padding: 14px 11px;
+    }
+
+    .watch-info h3 {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 10px;
+    }
+
+    .new-price {
+        font-size: 16px;
+    }
+
+    .old-price {
+        font-size: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">US WATCHES</div>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="shoes.html">shoes</a>
+        <a href="watch.html">watch</a>
+        <a href="about.html">about</a>
+        <button class="cart-count" id="cartToggle" type="button">
+            CART (<span id="cartCount">0</span>)
+        </button>
+    </nav>
+</header>
+
+<!-- WATCH BANNER -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="eyebrow">THE ART OF TIME</div>
+        <h1>TIMELESS<br><span>STYLE.</span></h1>
+        <p>
+            Discover statement timepieces designed to elevate your look.
+            Find your style with our curated watch collection and
+            enjoy an exclusive 20% launch discount.
+        </p>
+        <a href="#collection" class="gold-btn">EXPLORE COLLECTION →</a>
+    </div>
+
+    <div class="hero-note">PRECISION • STYLE • ELEGANCE</div>
+</section>
+
+<!-- FOUR WATCHES -->
+<section class="collection" id="collection">
+
+    <div class="section-top">
+        <div>
+            <div class="eyebrow">THE FIRST EDITION</div>
+            <h2>THE WATCH <span>COLLECTION</span></h2>
+        </div>
+        <p>4 SELECTED TIMEPIECES<br>20% OFF EVERY WATCH</p>
+    </div>
+
+    <div class="watch-grid">
+
+        <!-- WATCH 1 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=85"
+                    alt="Luxury silver wristwatch"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">CLASSIC COLLECTION</div>
+                <h3>Classic Silver</h3>
+                <p class="description">A timeless look for everyday elegance.</p>
+                <div class="price-row">
+                    <span class="old-price">₹799</span>
+                    <span class="new-price">₹639.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(1, 'Classic Silver', 639.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 2 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=85"
+                    alt="Elegant wristwatch"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">MODERN COLLECTION</div>
+                <h3>Midnight Black</h3>
+                <p class="description">A bold finish for a modern outfit.</p>
+                <div class="price-row">
+                    <span class="old-price">₹799</span>
+                    <span class="new-price">₹639.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(2, 'Midnight Black', 639.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 3 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=700&q=85"
+                    alt="Premium wristwatch"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">PREMIUM COLLECTION</div>
+                <h3>Golden Heritage</h3>
+                <p class="description">Elegant detailing with a premium feel.</p>
+                <div class="price-row">
+                    <span class="old-price">₹799</span>
+                    <span class="new-price">₹639.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(3, 'Golden Heritage', 639.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 4 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=700&q=85"
+                    alt="Luxury dark wristwatch"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">SIGNATURE COLLECTION</div>
+                <h3>Royal Steel</h3>
+                <p class="description">A refined statement for special moments.</p>
+                <div class="price-row">
+                    <span class="old-price">₹799</span>
+                    <span class="new-price">₹639.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(4, 'Royal Steel', 639.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- WATCHES 5 TO 8 -->
+<section class="collection" id="collection-2">
+
+    <div class="section-top">
+        <div>
+            <div class="eyebrow">THE SECOND EDITION</div>
+            <h2>THE WATCH <span>COLLECTION</span></h2>
+        </div>
+        <p>4 EXCLUSIVE TIMEPIECES<br>20% OFF EVERY WATCH</p>
+    </div>
+
+    <div class="watch-grid">
+
+        <!-- WATCH 5 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=700&q=85"
+                    alt="Elegant luxury wristwatch 5"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">EXECUTIVE COLLECTION</div>
+                <h3>Executive Gold</h3>
+                <p class="description">A sophisticated look for your everyday style.</p>
+                <div class="price-row">
+                    <span class="old-price">₹1,299</span>
+                    <span class="new-price">₹1,039.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(5, 'Executive Gold', 1039.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 6 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=700&q=85"
+                    alt="Premium classic wristwatch 6"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">HERITAGE COLLECTION</div>
+                <h3>Heritage Silver</h3>
+                <p class="description">Classic detailing with a refined finish.</p>
+                <div class="price-row">
+                    <span class="old-price">₹1,299</span>
+                    <span class="new-price">₹1,039.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(6, 'Heritage Silver', 1039.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 7 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=700&q=85"
+                    alt="Luxury gold-tone watch 7"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">ROYAL COLLECTION</div>
+                <h3>Royal Gold</h3>
+                <p class="description">A statement piece for memorable occasions.</p>
+                <div class="price-row">
+                    <span class="old-price">₹1,299</span>
+                    <span class="new-price">₹1,039.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(7, 'Royal Gold', 1039.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 8 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&w=700&q=85"
+                    alt="Modern luxury wristwatch 8"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+            <div class="watch-info">
+                <div class="category">SIGNATURE COLLECTION</div>
+                <h3>Signature Black</h3>
+                <p class="description">Minimal design with a premium attitude.</p>
+                <div class="price-row">
+                    <span class="old-price">₹1,299</span>
+                    <span class="new-price">₹1,039.20</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(8, 'Signature Black', 1039.20)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- WATCHES 9 TO 12 -->
+<section class="collection" id="collection-3">
+
+    <div class="section-top">
+        <div>
+            <div class="eyebrow">THE THIRD EDITION</div>
+            <h2>TIMELESS <span>MASTERPIECES</span></h2>
+        </div>
+        <p>4 EXCLUSIVE TIMEPIECES<br>20% OFF EVERY WATCH</p>
+    </div>
+
+    <div class="watch-grid">
+
+        <!-- WATCH 9 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://premiumcollections.co.in/cdn/shop/files/file_00000000c18071fa899057908a0906c2.png?v=1779080848&width=1946"
+                    alt="Luxury wristwatch collection nine"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">PRESTIGE COLLECTION</div>
+                <h3>Prestige Silver</h3>
+                <p class="description">Clean lines and timeless everyday sophistication.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹1,299</span>
+                    <span class="new-price">₹1,139.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(9, 'Prestige Silver', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 10 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=700&q=85"
+                    alt="Distinctive premium wristwatch ten"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">URBAN COLLECTION</div>
+                <h3>Urban Midnight</h3>
+                <p class="description">A bold design made for a confident look.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹1,399</span>
+                    <span class="new-price">₹1,239.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(10, 'Urban Midnight', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 11 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1548171915-e79a380a2a4b?auto=format&fit=crop&w=700&q=85"
+                    alt="Elegant designer timepiece eleven"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">ELITE COLLECTION</div>
+                <h3>Elite Champagne</h3>
+                <p class="description">Elegant detailing for special occasions.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹1,499</span>
+                    <span class="new-price">₹1,339.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(11, 'Elite Champagne', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 12 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=700&q=85"
+                    alt="Distinctive modern timepiece twelve"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">ICONIC COLLECTION</div>
+                <h3>Iconic Steel</h3>
+                <p class="description">A versatile finish for day and evening wear.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹1,599</span>
+                    <span class="new-price">₹1,439.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(12, 'Iconic Steel', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+
+    </div>
+</section>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------->
+
+```html
+<!-- WATCHES 13 TO 16 -->
+<section class="collection" id="collection-4">
+
+    <div class="section-top">
+        <div>
+            <div class="eyebrow">THE FOURTH EDITION</div>
+            <h2>THE LUXURY <span>SELECTION</span></h2>
+        </div>
+        <p>4 EXCLUSIVE TIMEPIECES<br>20% OFF EVERY WATCH</p>
+    </div>
+
+    <div class="watch-grid">
+
+        <!-- WATCH 13 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1619134778706-7015533a6150?auto=format&fit=crop&w=700&q=85"
+                    alt="Luxury watch collection 13"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">LUXURY COLLECTION</div>
+                <h3>Luxury Chrono</h3>
+                <p class="description">A confident design for a polished look.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹2,299</span>
+                    <span class="new-price">₹2,039.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(13, 'Luxury Chrono', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 14 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://rukminim3.flixcart.com/image/480/640/xif0q/screen-guard/nano-glass/d/y/b/r34m5078-varsha-original-imah7mydqkkzhahh.jpeg?q=90"
+                    alt="Distinctive wristwatch collection 14"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">PRESTIGE COLLECTION</div>
+                <h3>Prestige Black</h3>
+                <p class="description">A refined finish with a modern attitude.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹2,299</span>
+                    <span class="new-price">₹2,039.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(14, 'Prestige Black', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 15 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1609587312208-cea54be969e7?auto=format&fit=crop&w=700&q=85"
+                    alt="Elegant watch collection 15"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">SIGNATURE COLLECTION</div>
+                <h3>Signature Gold</h3>
+                <p class="description">A sophisticated accessory for every occasion.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹3,299</span>
+                    <span class="new-price">₹3,039.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(15, 'Signature Gold', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+        <!-- WATCH 16 -->
+        <article class="watch-card">
+            <div class="image-box">
+                <img
+                    src="https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=700&q=85"
+                    alt="Contemporary timepiece collection 16"
+                    loading="lazy">
+                <span class="discount">20% OFF</span>
+            </div>
+
+            <div class="watch-info">
+                <div class="category">ELITE COLLECTION</div>
+                <h3>Elite Silver</h3>
+                <p class="description">Understated elegance with everyday versatility.</p>
+
+                <div class="price-row">
+                    <span class="old-price">₹3,299</span>
+                    <span class="new-price">₹3,039.20</span>
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(16, 'Elite Silver', 1039.20, event)">
+                    ADD TO CART +
+                </button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BRAND STORY -->
+<section class="story">
+    <div class="eyebrow">EVERY SECOND MATTERS</div>
+    <h2>MAKE EVERY MOMENT <span>COUNT.</span></h2>
+    <p>
+        Your watch is more than an accessory. It is part of your
+        everyday style, your milestones and your story.
+        Explore the US WATCHES collection and find a look that feels like you.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="logo">US WATCHES</div>
+    <p>TIMELESS STYLE. EVERYDAY ELEGANCE.</p>
+    <p>Website Created by <strong>Rohit Rathod</strong></p>
+    <p>© 2026 US WATCHES. All rights reserved.</p>
+    <p>Independent watch-store concept. Not affiliated with Rolex or any other watch brand.</p>
+</footer>
+
+<!-- CART POPUP -->
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-heading">
+        <h3>YOUR CART</h3>
+        <button class="close-cart" id="closeCart" type="button" aria-label="Close cart">×</button>
+    </div>
+
+    <div id="cartItems">
+        <p class="empty-cart">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0.00</strong>
+    </div>
+
+    <button class="gold-btn" style="width:100%" onclick="checkoutDemo()">
+        CONTINUE
+    </button>
+</div>
+
+<script>
+const cart = [];
+
+const cartToggle = document.getElementById("cartToggle");
+const cartPanel = document.getElementById("cartPanel");
+const closeCart = document.getElementById("closeCart");
+
+cartToggle.addEventListener("click", () => {
+    cartPanel.classList.toggle("open");
+});
+
+closeCart.addEventListener("click", () => {
+    cartPanel.classList.remove("open");
+});
+
+function addToCart(id, name, price) {
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({
+            id: id,
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+
+    updateCart();
+
+    cartPanel.classList.add("open");
+
+    const button = document.querySelector(
+        `.watch-card:nth-child(${id}) .add-btn`
+    );
+
+    if (button) {
+        const oldText = button.textContent;
+        button.textContent = "ADDED ✓";
+        button.disabled = true;
+
+        setTimeout(() => {
+            button.textContent = oldText;
+            button.disabled = false;
+        }, 900);
+    }
+}
+
+function updateCart() {
+    const cartItems = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+    const cartTotal = document.getElementById("cartTotal");
+
+    const totalQuantity = cart.reduce(
+        (sum, item) => sum + item.quantity, 0
+    );
+
+    const totalPrice = cart.reduce(
+        (sum, item) => sum + item.price * item.quantity, 0
+    );
+
+    cartCount.textContent = totalQuantity;
+    cartTotal.textContent = "₹" + totalPrice.toFixed(2);
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+        return;
+    }
+
+    cartItems.innerHTML = cart.map(item => `
+        <div class="cart-item">
+            <span>
+                ${item.name}<br>
+                Qty: ${item.quantity}
+            </span>
+            <span>₹${(item.price * item.quantity).toFixed(2)}</span>
+        </div>
+    `).join("");
+}
+
+function checkoutDemo() {
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add a watch first.");
+        return;
+    }
+
+    alert(
+        "Your cart contains " +
+        cart.reduce((sum, item) => sum + item.quantity, 0) +
+        " watch(es).\n\nThis is a demo store: online payment and real orders are not configured yet."
+    );
+}
+</script>
+    <script src="error.js" defer></script>
+
+
+</body>
+</html>
+
